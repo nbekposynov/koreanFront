@@ -1,0 +1,43 @@
+@import "helpers/tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+/** {*/
+/*    font-family: 'Cairo', sans-serif;*/
+/*}*/
+html {
+    font-size: 16px;
+}
+input {
+    outline: none;
+}
+@media (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+}
+a {
+    display: block;
+}
+.swiper-pagination-bullet {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 40px !important;
+    background: #fff !important;
+    transition: all 0.3s ease-in-out !important;
+}
+.swiper-pagination-bullet-active {
+    width: 60px !important;
+    border-radius: 40px !important;
+    background: #E0E0E0 !important;
+}
+@media (max-width: 768px) {
+    .swiper-pagination-bullet {
+        width: 10px !important;
+        height: 10px !important;
+    }
+    .swiper-pagination-bullet-active {
+        width: 40px !important;
+        border-radius: 40px !important;
+        background: #E0E0E0 !important;
+    }
+}

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .container {
+        @apply max-w-[calc(1372px-1.25rem)] mx-auto px-5;
+    }
+
+    .news-card {
+        @apply relative lg:rounded-[20px] rounded-xl lg:p-6 p-3 flex flex-col lg:gap-6 sm:gap-3 gap-2 md:min-w-[37vw] md:min-h-[34vw] min-w-[50vw] border border-light;
+    }
+    .news-card__img {
+        @apply flex items-center justify-center rounded-3xl overflow-hidden;
+    }
+    .news-card__title {
+        @apply lg:text-4xl sm:text-2xl text-base text-primary font-bold;
+    }
+    .news-card__date {
+        @apply lg:text-xl sm:text-base text-sm text-light;
+    }
+
+    .association-item {
+        @apply text-3xl py-[3em] bg-light flex items-center justify-center rounded-[20px];
+    }
+
+    .title {
+        @apply container md:text-4xl text-2xl md:font-bold font-bold
+    }
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
