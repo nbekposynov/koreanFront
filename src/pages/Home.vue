@@ -65,7 +65,7 @@ onMounted(async () => {
             sit arcu venenatis viverra enim sed cursus nam. Et mauris amet in id. Dolor adipiscing quis non proin in.
             Adipiscing in elementum morbi sed nibh felis. Orci mi duis ut proin enim proin. Consequat maecenas quis sit
             convallis aenean mattis.</p>
-          <button class="bg-primary text-secondary py-3.5 px-9 text-2xl rounded-full">Посмотреть всю галлерею</button>
+          <router-link to="/gallery" class="bg-primary text-center text-secondary py-3.5 px-9 text-2xl rounded-full">Посмотреть всю галлерею</router-link>
         </div>
 
         <div class="grid grid-cols-2 md:gap-16 gap-5 w-fit lg:mt-40 mg:mt-20 mt-10 mr-[-24vw]">

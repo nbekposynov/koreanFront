@@ -4,7 +4,7 @@
 
 @layer components {
     .container {
-        @apply max-w-[calc(1372px-1.25rem)] mx-auto px-5;
+        @apply max-w-[calc(1200px-1.25rem)] mx-auto px-5;
     }
 
     .news-card {

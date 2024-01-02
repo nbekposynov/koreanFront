@@ -31,8 +31,8 @@ onMounted(async () => {
     </div>
     <div class="lg:mt-20 md:mt-14 mt-10">
       <h3 class="title">Новости</h3>
-      <filters-list class="md:mt-10 mt-5 px-calc"/>
-      <categories/>
+<!--      <filters-list class="md:mt-10 mt-5 px-calc"/>-->
+<!--      <categories/>-->
       <news-list-grid :news="news"/>
     </div>
   </section>

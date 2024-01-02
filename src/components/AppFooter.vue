@@ -18,10 +18,10 @@ import IconWhatsapp from '@/components/icon/whatsapp.vue'
         <div>
           <p class="uppercase font-medium text-[10px] opacity-[0.4]">карта сайта</p>
           <div class="text-sm mt-6 opacity-[0.8]">
-            <a href="#" class="decoration-0">Ассоциация корецев Казахстана</a>
-            <a href="#" class="decoration-0">Корейские новости</a>
-            <a href="#" class="decoration-0">Коре ильбо</a>
-            <a href="#" class="decoration-0">Библиотека</a>
+            <router-link to="/associations" class="decoration-0">Ассоциация корецев Казахстана</router-link>
+            <router-link to="/news" class="decoration-0">Корейские новости</router-link>
+            <router-link to="/ilbo" class="decoration-0">Коре ильбо</router-link>
+            <router-link to="/library" class="decoration-0">Библиотека</router-link>
           </div>
         </div>
 
@@ -31,10 +31,10 @@ import IconWhatsapp from '@/components/icon/whatsapp.vue'
         <div>
           <p class="uppercase font-medium text-[10px] opacity-[0.4]">ДОПОЛНИТЕЛЬНО</p>
           <div class="text-sm mt-6 opacity-[0.8]">
-            <a href="#" class="block decoration-0">Контакты и региональные подразделения АКК</a>
-            <a href="#" class="block decoration-0">Новости</a>
-            <a href="#" class="block decoration-0">Equipment Installation</a>
-            <a href="#" class="block decoration-0">Галерея</a>
+            <router-link to="/contacts" class="block decoration-0">Контакты и региональные подразделения АКК</router-link>
+            <router-link to="/news" class="block decoration-0">Новости</router-link>
+<!--            <a href="#" class="block decoration-0">Equipment Installation</a>-->
+            <router-link to="/gallery" class="block decoration-0">Галерея</router-link>
           </div>
         </div>
         <div class="text-sm lg:mt-16 md:mt-12 mt-8">
@@ -42,8 +42,8 @@ import IconWhatsapp from '@/components/icon/whatsapp.vue'
           <div class="mt-6 flex gap-16">
             <div>
               <a href="tel:+7 777 77 77">+7 777 77 77</a>
-              <a href="#">roo_akk@mail.ru</a>
-              <a href="#">info@koreans.kz</a>
+              <a href="mailto:roo_akk@mail.ru">roo_akk@mail.ru</a>
+              <a href="mailto:info@koreans.kz">info@koreans.kz</a>
             </div>
             <div class="flex gap-8 pt-4">
               <icon-telegram/>
@@ -53,11 +53,11 @@ import IconWhatsapp from '@/components/icon/whatsapp.vue'
 
           <div class="flex justify-between gap-2.5 lg:mt-40 md:mt-30 mt-20">
             <div class="text-sm flex gap-4">
-              <a href="#">Главная страница</a>
+              <router-link to="/">Главная страница</router-link>
               <span class="opacity-[0.2]">/</span>
-              <a href="#">Новости</a>
+              <router-link to="/news">Новости</router-link>
               <span class="opacity-[0.2]">/</span>
-              <a href="#">Контакты</a>
+              <router-link to="/contacts">Контакты</router-link>
             </div>
 
             <p class="text-xs opacity-[0.4] font-medium">Privacy</p>
