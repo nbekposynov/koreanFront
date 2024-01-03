@@ -29,6 +29,11 @@ const router = createRouter({
       component: () => import('../pages/News/Item.vue')
     },
     {
+      path: '/search',
+      name: 'search',
+      component: () => import('../pages/News/Search.vue')
+    },
+    {
       path: '/ilbo',
       name: 'ilbo',
       component: () => import('../pages/Ilbo.vue')

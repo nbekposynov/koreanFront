@@ -24,6 +24,11 @@ export const useHttp = () => {
         return res.data
     }
 
+    async function searchNews(search) {
+        const res = await http.get('api/post/search?search=' + search);
+        return res.data
+    }
+
     async function getNewsById(id) {
         const res = await http.get(`api/posts/${id}`);
         return res.data
@@ -48,6 +53,7 @@ export const useHttp = () => {
         getAlbum,
         getNews,
         filterNews,
+        searchNews,
         getNewsById,
         getMagazines,
         downloadMagazine,
