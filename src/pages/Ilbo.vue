@@ -33,6 +33,7 @@ const months = ref([
 ])
 const selectedYear = ref('2023')
 const blobUrl = ref('')
+//тег а для скачивания журнала
 const downloadLink = ref(null)
 
 async function handleGetMagazines(year, month = '') {
@@ -46,11 +47,12 @@ async function handleGetMagazines(year, month = '') {
     magazines.value = await getMagazines(selectedYear.value)
   }
 }
-
+//функция для скачивания журнала
 async function handleDownloadMagazine(id) {
   const res = await downloadMagazine(id)
   blobUrl.value = URL.createObjectURL(new Blob([res]))
   downloadLink.value.download = 'коре ильбо.pdf'
+  //нажатие на ссылку
   downloadLink.value.click()
 }
 onMounted(async () => {
