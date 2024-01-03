@@ -5,7 +5,7 @@ export const useHttp = () => {
     axios.defaults.headers.common['ngrok-skip-browser-warning'] = '69420';
 
     const http = axios.create({
-        baseURL: 'https://da3a-46-34-195-132.ngrok-free.app/'
+        baseURL: 'https://2bee-95-57-114-19.ngrok-free.app'
     });
 
     async function getAlbum() {
@@ -15,6 +15,12 @@ export const useHttp = () => {
 
     async function getNews() {
         const res = await http.get('api/posts');
+        return res.data
+    }
+
+    async function filterNews(filter) {
+        let query = '?' + filter.join('&')
+        const res = await http.get('api/post/filter' + query);
         return res.data
     }
 
@@ -41,6 +47,7 @@ export const useHttp = () => {
     return {
         getAlbum,
         getNews,
+        filterNews,
         getNewsById,
         getMagazines,
         downloadMagazine,
