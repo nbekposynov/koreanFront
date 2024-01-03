@@ -12,7 +12,7 @@ module.exports = {
         dark: '#000000',
       },
       spacing: {
-        calc: 'max((100vw - 1200px) / 2, 1.25rem)'
+        calc: 'max((100vw - 1200px) / 2, 2.5rem)'
       },
       screens: {
         'xs': '475px',
