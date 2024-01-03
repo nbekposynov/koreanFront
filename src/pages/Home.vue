@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import {Pagination, Autoplay} from 'swiper/modules';
 import {onMounted, ref } from "vue";
 import {useHttp} from "@/composables/useHttp.js";
-const { getAlbum } = useHttp()
+const { getAlbum, getHomeAlbum } = useHttp()
 
 const pagination = {
   el: '.swiper-pagination',
@@ -16,9 +16,13 @@ const pagination = {
 const modules = [Pagination, Autoplay];
 
 const album = ref([])
+const homeAlbum = ref([])
 
 onMounted(async () => {
   album.value = await getAlbum()
+  const res = await getHomeAlbum()
+  homeAlbum.value = res.album.photos
+  console.log(res)
 })
 </script>
 
@@ -42,19 +46,19 @@ onMounted(async () => {
 
     <home-news-list class="xl:my-20 lg:my-10 my-8"/>
 
-    <div class="lg:grid grid-cols-[60%_30%] flex flex-col max-lg:container md:gap-14 gap-10 overflow-hidden">
+    <div v-if="homeAlbum.length" class="lg:grid grid-cols-[60%_30%] flex flex-col max-lg:container md:gap-14 gap-10 overflow-hidden">
       <div>
         <div class="grid grid-cols-2 md:gap-16 gap-5 w-fit lg:ml-[-4vw]">
-          <div class="rounded-full w-fit overflow-hidden shadow-custom">
-            <img class="lg:h-[16vw]" src="@/assets/img/mock/home-gallery.png" alt="">
+          <div v-if="homeAlbum[0].image_path" class="rounded-full w-fit overflow-hidden shadow-custom">
+            <img class="lg:h-[16vw]" :src="homeAlbum[0].image_path" alt="">
           </div>
-          <div class="rounded-full w-fit overflow-hidden shadow-custom">
-            <img class="lg:h-[16vw]" src="@/assets/img/mock/home-gallery.png" alt="">
+          <div v-if="homeAlbum[1].image_path" class="rounded-full w-fit overflow-hidden shadow-custom">
+            <img class="lg:h-[16vw]" :src="homeAlbum[1].image_path" alt="">
           </div>
         </div>
-        <div class="lg:mt-24 md:mt-16 mt-12 sm:rounded-[90px] rounded-[50px] lg:w-[50.066vw] lg:ml-calc sm:p-9 p-6 shadow-customInner">
+        <div v-if="homeAlbum[2].image_path" class="lg:mt-24 md:mt-16 mt-12 sm:rounded-[90px] rounded-[50px] lg:w-[50.066vw] lg:ml-calc sm:p-9 p-6 shadow-customInner">
           <div class="sm:rounded-[50px] rounded-[24px] overflow-hidden">
-            <img src="@/assets/img/mock/home-gallery2.png" alt="">
+            <img :src="homeAlbum[2].image_path" alt="">
           </div>
         </div>
       </div>
@@ -69,11 +73,11 @@ onMounted(async () => {
         </div>
 
         <div class="grid grid-cols-2 md:gap-16 gap-5 w-fit lg:mt-40 mg:mt-20 mt-10 mr-[-24vw]">
-          <div class="rounded-full w-fit overflow-hidden shadow-custom">
-            <img class="lg:h-[16vw]" src="@/assets/img/mock/home-gallery.png" alt="">
+          <div v-if="homeAlbum[3].image_path" class="rounded-full w-fit overflow-hidden shadow-custom">
+            <img class="lg:h-[16vw]" :src="homeAlbum[3].image_path" alt="">
           </div>
-          <div class="rounded-full w-fit overflow-hidden shadow-custom">
-            <img class="lg:h-[16vw]" src="@/assets/img/mock/home-gallery.png" alt="">
+          <div v-if="homeAlbum[4].image_path" class="rounded-full w-fit overflow-hidden shadow-custom">
+            <img class="lg:h-[16vw]" :src="homeAlbum[4].image_path" alt="">
           </div>
         </div>
       </div>

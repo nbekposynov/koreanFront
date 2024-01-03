@@ -64,6 +64,11 @@ export const useHttp = () => {
         return res.data
     }
 
+    async function getHomeAlbum(data) {
+        const res = await http.get(`api/getAlbumPhotoHome`);
+        return res.data
+    }
+
     return {
         getAlbum,
         getNews,
@@ -75,6 +80,7 @@ export const useHttp = () => {
         getBooks,
         getCities,
         getBranch,
-        sendPhone
+        sendPhone,
+        getHomeAlbum
     }
 }
