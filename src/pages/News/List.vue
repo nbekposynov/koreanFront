@@ -4,16 +4,73 @@ import Categories from "@/components/Categories.vue";
 import NewsListGrid from "@/widgets/News/ListGrid.vue";
 
 import {useHttp} from "@/composables/useHttp.js";
-import {onMounted, ref} from "vue";
-const { getNews } = useHttp()
+import {onMounted, ref, watch} from "vue";
+const { getNews, filterNews } = useHttp()
 
 const news = ref([])
 const latest = ref(null)
+const filters = ref([
+  {
+    title: 'Любая дата',
+    value: ''
+  },
+  {
+    title: 'На выходных',
+    value: 'weekends=true'
+  },
+  {
+    title: 'На этой неделе',
+    value: 'this_week=true'
+  },
+  {
+    title: 'В этом месяце',
+    value: 'this_month=true'
+  }
+])
+const categories = ref([
+  {
+    title: 'Все',
+    value: ''
+  },
+  {
+    title: 'Русс',
+    value: 'korean=0'
+  },
+  {
+    title: 'Korean',
+    value: 'korean=1'
+  },
+])
+const getNewsBy = ref({
+  filter: '',
+  category: '',
+})
 
+const notFound = ref(false)
 onMounted(async () => {
   news.value = await getNews()
   latest.value = news.value[0]
 })
+
+async function handleFilterNews() {
+  let filter = [getNewsBy.value.filter, getNewsBy.value.category]
+  console.log(filter)
+  try {
+    const response = await filterNews(filter)
+    console.log(response)
+    if (response.length) {
+      news.value = response
+      notFound.value = false
+    } else {
+      notFound.value = true
+    }
+  } catch (e) {
+    console.log(e)
+  }
+}
+watch(getNewsBy, () =>{
+  handleFilterNews()
+}, {deep: true})
 </script>
 
 <template>
@@ -30,10 +87,11 @@ onMounted(async () => {
       </div>
     </div>
     <div class="lg:mt-20 md:mt-14 mt-10">
-      <h3 class="title">Новости</h3>
-<!--      <filters-list class="md:mt-10 mt-5 px-calc"/>-->
-<!--      <categories/>-->
-      <news-list-grid :news="news"/>
+      <h3 class="title container">Новости</h3>
+      <filters-list :filters="filters" @filter="getNewsBy.filter = $event.value" class="md:mt-10 mt-5 px-calc"/>
+      <categories :categories="categories" @category="getNewsBy.category = $event.value" class="px-calc"/>
+      <div v-if="notFound" class="text-3xl font-bold w-full h-[25vw] flex items-center justify-center">К сожалению ничего не найдено</div>
+      <news-list-grid v-else class="container" :news="news"/>
     </div>
   </section>
 </template>
