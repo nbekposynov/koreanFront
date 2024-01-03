@@ -8,7 +8,7 @@
     }
 
     .news-card {
-        @apply relative lg:rounded-[20px] rounded-xl lg:p-6 p-3 flex flex-col lg:gap-6 sm:gap-3 gap-2 md:min-w-[37vw] md:min-h-[34vw] min-w-[50vw] border border-light;
+        @apply relative lg:rounded-[20px] rounded-xl lg:p-6 p-3 flex flex-col lg:gap-6 sm:gap-3 gap-2 md:min-w-[35vw] md:min-h-[30vw] min-w-[50vw] border border-light;
     }
     .news-card__img {
         @apply flex items-center justify-center rounded-3xl overflow-hidden;

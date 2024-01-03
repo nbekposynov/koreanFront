@@ -49,7 +49,7 @@ const getNewsBy = ref({
 const notFound = ref(false)
 onMounted(async () => {
   news.value = await getNews()
-  latest.value = news.value[0]
+  latest.value = news.value[news.value.length - 1]
 })
 
 async function handleFilterNews() {

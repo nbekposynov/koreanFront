@@ -38,7 +38,7 @@ onMounted(async () => {
       <div class="swiper-pagination"></div>
     </swiper>
 
-    <home-tags-list class="xl:mt-16 lg:mt-8 mt-5"/>
+    <home-tags-list class="xl:mt-16 lg:mt-8 mt-5 justify-center"/>
 
     <home-news-list class="xl:my-20 lg:my-10 my-8"/>
 

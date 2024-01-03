@@ -49,6 +49,21 @@ export const useHttp = () => {
         return res.data
     }
 
+    async function getCities() {
+        const res = await http.get(`api/cities`);
+        return res.data
+    }
+
+    async function getBranch(id) {
+        const res = await http.get(`api/cities/${id}/contacts`);
+        return res.data
+    }
+
+    async function sendPhone(data) {
+        const res = await http.post(`api/send-phone`, data);
+        return res.data
+    }
+
     return {
         getAlbum,
         getNews,
@@ -57,6 +72,9 @@ export const useHttp = () => {
         getNewsById,
         getMagazines,
         downloadMagazine,
-        getBooks
+        getBooks,
+        getCities,
+        getBranch,
+        sendPhone
     }
 }

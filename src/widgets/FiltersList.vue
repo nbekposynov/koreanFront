@@ -2,7 +2,11 @@
 import FilterRound from "@/components/FilterRound.vue";
 import {onMounted, ref} from "vue";
 const props = defineProps({
-  filters: Array
+  filters: Array,
+  field: {
+    type: String,
+    default: 'title'
+  }
 })
 const emit = defineEmits(['filter'])
 
@@ -24,7 +28,7 @@ const selectFilter = (filter) => {
 <!--      <filter-round>На этой неделе</filter-round>-->
 <!--      <filter-round>В этом месяце</filter-round>-->
       <template v-for="item in filters">
-        <filter-round @click="selectFilter(item)" :active="selectedFilter?.title === item?.title">{{ item?.title }}</filter-round>
+        <filter-round v-if="selectedFilter" @click="selectFilter(item)" :active="selectedFilter[field] === item[field]">{{ item[field] }}</filter-round>
       </template>
     </div>
 </template>

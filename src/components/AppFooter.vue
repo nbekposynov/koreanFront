@@ -1,6 +1,19 @@
 <script setup>
 import IconTelegram from '@/components/icon/telegram.vue'
 import IconWhatsapp from '@/components/icon/whatsapp.vue'
+import { useHttp } from "@/composables/useHttp.js";
+import {ref} from "vue";
+const { sendPhone } = useHttp()
+
+const phone = ref('')
+
+async function handleSendPhone() {
+  let data = {
+    phone_number: '+' + phone.value.replace(/\D/g, '')
+  }
+  await sendPhone(data)
+  phone.value = ''
+}
 </script>
 
 <template>
@@ -8,10 +21,10 @@ import IconWhatsapp from '@/components/icon/whatsapp.vue'
     <div class="text-center md:py-16 py-10">
       <p class="lg:text-3xl md:text-2xl text-xl">У вас есть вопросы?</p>
       <p class="text-base mt-2">Вы можете написать нам</p>
-      <div class="rounded-2xl border border-light max-w-[690px] mx-auto flex overflow-hidden p-1 mt-8">
-        <input type="text" class="py-3 px-5 w-full bg-primary outline-none">
+      <form @submit.prevent="handleSendPhone" class="rounded-2xl border border-light max-w-[690px] mx-auto flex overflow-hidden p-1 mt-8">
+        <input type="text" v-mask="'+7 (###) ### ## ##'" v-model="phone" class="py-3 px-5 w-full bg-primary outline-none">
         <button class="px-5 py-3 uppercase text-primary bg-secondary rounded-xl text-xs font-semibold">Отправить</button>
-      </div>
+      </form>
     </div>
     <div class="md:mt-16 mt-10 flex sm:flex-row flex-col gap-4">
       <div class="w-[30%] flex flex-col justify-between">
