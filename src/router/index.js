@@ -19,6 +19,31 @@ const router = createRouter({
       component: () => import('../pages/Associations/Item.vue')
     },
     {
+      path: '/association/2',
+      name: 'association-2',
+      component: () => import('../pages/Associations/Item2.vue')
+    },
+    {
+      path: '/association/3',
+      name: 'association-3',
+      component: () => import('../pages/Associations/Item3.vue')
+    },
+    {
+      path: '/association/4',
+      name: 'association-4',
+      component: () => import('../pages/Associations/Item4.vue')
+    },
+    {
+      path: '/association/5',
+      name: 'association-5',
+      component: () => import('../pages/Associations/Item5.vue')
+    },
+    {
+      path: '/association/6',
+      name: 'association-6',
+      component: () => import('../pages/Associations/Item6.vue')
+    },
+    {
       path: '/news',
       name: 'news',
       component: () => import('../pages/News/List.vue')
