@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#001D3E',
+        // primary: '#001D3E',
+        primary: '#032973',
         secondary: '#ffffff',
         light: '#E0E0E0',
         lighter: '#F2F2F2',
@@ -12,7 +13,7 @@ module.exports = {
         dark: '#000000',
       },
       spacing: {
-        calc: 'max((100vw - 1200px) / 2, 2.5rem)'
+        calc: 'max((100vw - 1368px) / 2, 2.5rem)'
       },
       screens: {
         'xs': '475px',

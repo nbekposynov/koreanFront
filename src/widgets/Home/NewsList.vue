@@ -71,16 +71,24 @@ watch(getNewsBy, () =>{
 </script>
 
 <template>
-  <div>
-    <div>
-      <h3 class="container lg:text-4xl text-2xl font-bold flex gap-5">
-        <label class="text-primary">Лучшие</label>
-        <label class="text-light">Новости</label>
+  <div class="news-list">
+    <div class="container">
+      <h3 class="lg:text-4xl text-2xl font-bold flex gap-5">
+        <label class="text-primary">Новости <span class="font-[Cairo]">🔥</span></label>
       </h3>
-      <filters-list :filters="filters" @filter="getNewsBy.filter = $event.value" class="mt-8 pl-auto px-calc"/>
-      <categories :categories="categories" @category="getNewsBy.category = $event.value" class="px-calc"/>
+      <p class="text-light text-base mt-[7px]">Актуальные</p>
+<!--      <filters-list :filters="filters" @filter="getNewsBy.filter = $event.value" class="mt-8 pl-auto px-calc"/>-->
+<!--      <categories :categories="categories" @category="getNewsBy.category = $event.value" class="px-calc"/>-->
     </div>
     <div v-if="notFound" class="text-3xl font-bold w-full h-[25vw] flex items-center justify-center">К сожалению ничего не найдено</div>
     <news-list-horizontal v-else class="px-calc" :news="news"/>
   </div>
 </template>
+<style scoped>
+.news-list {
+  background-image: url('@/assets/img//news-bg.png');
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+</style>

@@ -3,15 +3,15 @@ import Search from "@/components/Search.vue";
 import {onMounted, ref} from "vue";
 import useBreakpoint from "@/composables/useBreakpoint";
 const openMenu = ref(false)
-const showMenu = useBreakpoint(900)
+const showMenu = useBreakpoint(1200)
 </script>
 
 <template>
 <header>
-  <div class="container relative flex justify-between items-center gap-2.5 lg:p-10 md:p-5 p-2.5 text-secondary">
-    <router-link to="/">Логотип</router-link>
-
-    <search/>
+  <div class="container font-[Comfortaa] relative flex justify-between items-center gap-2.5 lg:p-2.5 md:p-5 p-2.5 text-secondary">
+    <router-link to="/" class="flex justify-center items-center min-w-[100px] w-[100px] h-[100px] overflow-hidden">
+      <img class="max-w-none w-[250%]" src="@/assets/img/logo.png" alt="">
+    </router-link>
 
     <template v-if="showMenu">
       <div class="burger-menu__btn" :class="{ active : openMenu }" @click="openMenu = !openMenu">
@@ -45,26 +45,32 @@ const showMenu = useBreakpoint(900)
     </template>
 
     <nav v-else class="flex justify-between gap-6">
-      <router-link to="/associations" class="whitespace-pre">Ассоциация корейцев Казахстана</router-link>
+      <router-link to="/associations" class="whitespace-pre text-2xl font-bold">Ассоциация корейцев Казахстана</router-link>
+      <div class="h-6 w-[2px] bg-secondary mr-auto"></div>
+      <a href="#">О Нас</a>
       <router-link to="/news">Новости</router-link>
-      <router-link to="/ilbo" class="whitespace-nowrap">Коре ильбо</router-link>
+      <router-link to="/ilbo" class="whitespace-nowrap">“Коре Ильбо”
+        100 лет</router-link>
       <router-link to="/library">Библиотека</router-link>
       <router-link to="/gallery">Галерея</router-link>
     </nav>
+
+
+    <search/>
   </div>
 </header>
 </template>
 
 <style scoped>
 header {
-  background: url('@/assets/img/ornament.svg');
+  background: url('@/assets/img/Rectangle 1.png');
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   background-position: 50% 50%;
   background-repeat: repeat-x;
   background-size: cover;
-  background-color: #001D3E;
-  position: fixed;
+  background-color: #0147ce;
+  position: absolute;
   width: 100%;
   z-index: 100;
 }

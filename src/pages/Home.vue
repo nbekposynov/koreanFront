@@ -46,17 +46,17 @@ onMounted(async () => {
 
     <home-news-list class="xl:my-20 lg:my-10 my-8"/>
 
-    <div v-if="homeAlbum.length" class="lg:grid grid-cols-[60%_30%] flex flex-col max-lg:container md:gap-14 gap-10 overflow-hidden">
+    <div v-if="homeAlbum.length" class="container lg:grid grid-cols-[50%_40%] flex flex-col max-lg:container md:gap-14 gap-10 overflow-hidden px-10 py-9">
       <div>
-        <div class="grid grid-cols-2 md:gap-16 gap-5 w-fit lg:ml-[-4vw]">
-          <div v-if="homeAlbum[0].image_path" class="rounded-full w-fit overflow-hidden shadow-custom">
-            <img class="lg:h-[16vw]" :src="homeAlbum[0].image_path" alt="">
+        <div class="flex md:gap-16 gap-5 w-fit">
+          <div v-if="homeAlbum[0].image_path" class="rounded-full w-[160px] overflow-hidden shadow-custom flex justify-center">
+            <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[0].image_path" alt="">
           </div>
-          <div v-if="homeAlbum[1].image_path" class="rounded-full w-fit overflow-hidden shadow-custom">
-            <img class="lg:h-[16vw]" :src="homeAlbum[1].image_path" alt="">
+          <div v-if="homeAlbum[1].image_path" class="rounded-full w-fit overflow-hidden shadow-custom flex justify-center">
+            <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[1].image_path" alt="">
           </div>
         </div>
-        <div v-if="homeAlbum[2].image_path" class="lg:mt-24 md:mt-16 mt-12 sm:rounded-[90px] rounded-[50px] lg:w-[50.066vw] lg:ml-calc sm:p-9 p-6 shadow-customInner">
+        <div v-if="homeAlbum[2].image_path" class="lg:mt-24 md:mt-16 mt-12 sm:rounded-[90px] rounded-[50px] lg:w-[40vw]">
           <div class="sm:rounded-[50px] rounded-[24px] overflow-hidden">
             <img :src="homeAlbum[2].image_path" alt="">
           </div>
@@ -72,12 +72,12 @@ onMounted(async () => {
           <router-link to="/gallery" class="bg-primary text-center text-secondary py-3.5 px-9 text-2xl rounded-full">Посмотреть всю галлерею</router-link>
         </div>
 
-        <div class="grid grid-cols-2 md:gap-16 gap-5 w-fit lg:mt-40 mg:mt-20 mt-10 mr-[-24vw]">
-          <div v-if="homeAlbum[3].image_path" class="rounded-full w-fit overflow-hidden shadow-custom">
-            <img class="lg:h-[16vw]" :src="homeAlbum[3].image_path" alt="">
+        <div class="flex md:gap-16 gap-5 w-fit lg:mt-40 mg:mt-20 mt-10">
+          <div v-if="homeAlbum[3].image_path" class="rounded-full w-fit overflow-hidden shadow-custom flex justify-center">
+            <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[3].image_path" alt="">
           </div>
-          <div v-if="homeAlbum[4].image_path" class="rounded-full w-fit overflow-hidden shadow-custom">
-            <img class="lg:h-[16vw]" :src="homeAlbum[4].image_path" alt="">
+          <div v-if="homeAlbum[4].image_path" class="rounded-full overflow-hidden shadow-custom w-[160px] flex justify-center">
+            <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[4].image_path" alt="">
           </div>
         </div>
       </div>

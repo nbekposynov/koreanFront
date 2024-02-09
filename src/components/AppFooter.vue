@@ -22,7 +22,7 @@ async function handleSendPhone() {
       <p class="lg:text-3xl md:text-2xl text-xl">У вас есть вопросы?</p>
       <p class="text-base mt-2">Вы можете написать нам</p>
       <form @submit.prevent="handleSendPhone" class="rounded-2xl border border-light max-w-[690px] mx-auto flex overflow-hidden p-1 mt-8">
-        <input type="text" v-mask="'+7 (###) ### ## ##'" v-model="phone" class="py-3 px-5 w-full bg-primary outline-none">
+        <input type="text" v-mask="'+7 (###) ### ## ##'" v-model="phone" class="py-3 px-5 w-full bg-transparent outline-none">
         <button class="px-5 py-3 uppercase text-primary bg-secondary rounded-xl text-xs font-semibold">Отправить</button>
       </form>
     </div>
@@ -86,7 +86,7 @@ async function handleSendPhone() {
   font-family: 'Inter', sans-serif;
 }
 footer {
-  background: url('@/assets/img/eagle.svg') no-repeat #001D3E;
+  background: url('@/assets/img/eagle.svg') no-repeat #032973;
   background-position: bottom 35% right 5%;
   background-size: 35%;
 }

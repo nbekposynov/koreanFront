@@ -49,11 +49,26 @@ async function handleGetMagazines(year, month = '') {
 }
 //функция для скачивания журнала
 async function handleDownloadMagazine(id) {
-  const res = await downloadMagazine(id)
-  blobUrl.value = URL.createObjectURL(new Blob([res]))
-  downloadLink.value.download = 'коре ильбо.pdf'
-  //нажатие на ссылку
-  downloadLink.value.click()
+  try {
+    const blob = await downloadMagazine(id); // Получаем Blob
+
+    if (blob.size === 0) {
+      throw new Error("Получен пустой Blob");
+    }
+
+    const blobUrl = URL.createObjectURL(blob);
+    const link = document.createElement('a'); // Создаем новую ссылку
+    link.href = blobUrl;
+    link.download = 'коре ильбо.pdf';
+    document.body.appendChild(link); // Добавляем ссылку в DOM
+    link.click(); // Нажимаем на ссылку
+
+    // Очистка
+    URL.revokeObjectURL(blobUrl);
+    document.body.removeChild(link);
+  } catch (error) {
+    console.error("Ошибка при скачивании журнала: ", error);
+  }
 }
 onMounted(async () => {
   magazines.value = await getMagazines(selectedYear.value)

@@ -4,13 +4,15 @@ import AppFooter from "@/components/AppFooter.vue";
 </script>
 
 <template>
-  <app-header v-if="!$route.path.includes('/gallery/')"/>
+  <div class="flex flex-col">
+    <app-header v-if="!$route.path.includes('/gallery/')"/>
 
-  <main :class="{ 'main' : !$route.path.includes('/gallery/')}">
-    <router-view/>
-  </main>
+    <main :class="{ 'main' : !$route.path.includes('/gallery/')}" class="flex-auto">
+      <router-view/>
+    </main>
 
-  <app-footer v-if="!$route.path.includes('/gallery/')"/>
+    <app-footer v-if="!$route.path.includes('/gallery/')"/>
+  </div>
 </template>
 <style scoped>
 .main {

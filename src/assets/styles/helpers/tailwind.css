@@ -4,11 +4,11 @@
 
 @layer components {
     .container {
-        @apply max-w-[calc(1200px-1.25rem)] mx-auto px-10;
+        @apply max-w-[calc(1368px-1.25rem)] mx-auto px-10;
     }
 
     .news-card {
-        @apply relative lg:rounded-[20px] rounded-xl lg:p-6 p-3 flex flex-col lg:gap-6 sm:gap-3 gap-2 md:min-w-[35vw] md:min-h-[30vw] min-w-[50vw] border border-light;
+        @apply relative lg:rounded-[20px] rounded-xl flex flex-col md:min-w-[35vw] md:min-h-[30vw] min-w-[50vw] border border-light;
     }
     .news-card__img {
         @apply flex items-center justify-center rounded-3xl overflow-hidden;
