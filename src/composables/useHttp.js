@@ -5,7 +5,7 @@ export const useHttp = () => {
     axios.defaults.headers.common['ngrok-skip-browser-warning'] = '69420';
 
     const http = axios.create({
-        baseURL: 'https://8982-81-88-147-47.ngrok-free.app/'
+        baseURL: 'https://0965-81-88-147-52.ngrok-free.app/'
     });
 
     async function getAlbum() {

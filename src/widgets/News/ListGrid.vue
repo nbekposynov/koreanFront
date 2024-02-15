@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="grid md:grid-cols-2 lg:gap-6 gap-3 lg:mt-9 lg:mt-6 mt-3 p-2">
+  <div class="container grid md:grid-cols-2 lg:gap-6 gap-3 lg:mt-9 lg:mt-6 mt-3 p-2">
     <news-card v-for="item in news" :item="item"/>
   </div>
 </template>

@@ -49,7 +49,7 @@ const getNewsBy = ref({
 const notFound = ref(false)
 onMounted(async () => {
   news.value = await getNews()
-  latest.value = news.value[news.value.length - 1]
+  latest.value = news.value[0]
 })
 
 async function handleFilterNews() {
@@ -78,7 +78,7 @@ watch(getNewsBy, () =>{
     <div class="flex flex-col md:flex-row items-start justify-between md:gap-10 gap-6 lg:mt-24 md:mt-16 mt-10 container">
       <div class="md:w-[55%] rounded-3xl overflow-hidden flex items-center justify-center">
         <img v-if="latest?.image" class="min-w-full min-h-full object-cover" :src="latest?.image" alt="">
-        <img v-else class="min-w-full min-h-full object-cover" src="@/assets/img/mock/new.png" alt="">
+        <img v-else class="min-w-full min-h-full object-cover" src="@/assets/img/no-img.png" alt="">
       </div>
       <div class="md:w-[45%] flex flex-col gap-6">
         <h3 class="lg:text-4xl text-3xl">{{ latest?.title }}</h3>
@@ -88,10 +88,10 @@ watch(getNewsBy, () =>{
     </div>
     <div class="lg:mt-20 md:mt-14 mt-10">
       <h3 class="title container">Новости</h3>
-      <filters-list :filters="filters" @filter="getNewsBy.filter = $event.value" class="md:mt-10 mt-5 px-calc"/>
-      <categories :categories="categories" @category="getNewsBy.category = $event.value" class="px-calc"/>
+<!--      <filters-list :filters="filters" @filter="getNewsBy.filter = $event.value" class="md:mt-10 mt-5 px-calc"/>-->
+<!--      <categories :categories="categories" @category="getNewsBy.category = $event.value" class="px-calc"/>-->
       <div v-if="notFound" class="text-3xl font-bold w-full h-[25vw] flex items-center justify-center">К сожалению ничего не найдено</div>
-      <news-list-grid v-else class="container" :news="news"/>
+      <news-list-grid v-else :news="news"/>
     </div>
   </section>
 </template>

@@ -42,6 +42,18 @@ onMounted(async () => {
       <div class="swiper-pagination"></div>
     </swiper>
 
+    <div class="about-us">
+      <div class="md:grid grid-cols-[300px_1fr] gap-10 py-5 container">
+        <div class="flex h-[300px] w-[300px] items-center justify-center overflow-hidden">
+          <img class="w-[200%] max-w-none" src="@/assets/img/logo.png" alt="">
+        </div>
+        <div>
+          <p class="font-[Comfortaa] text-4xl font-medium">О Нас</p>
+          <p class="font-[Comfortaa] text-lg font-medium mt-5">17 марта 1990 года в городе Алма-Ата состоялся учредительный съезд корейцев Казахстана, на котором была создана Республиканская Ассоциация корейских культурных центров (РАККЦ).Первым президентом Ассоциации корейских культурных центров был избран профессор, академик Хан Гурий Борисович. В это время начали организовываться корейские культурные центры во всех крупных городах Казахстана. Ассоциация объединила ведущих учёных, государственных и общественных деятелей.РАККЦК начала проводить активную работу по изучению и сохранению корейского языка, истории, культуры, обычаев и традиций, развитии литературы и искусства. Руководителями и активистами движения становились люди самого разного статуса: и интеллигенция, и учёные, и промышленники, и крестьяне. Чувствовалось, что казахстанские корейцы пробуждались в едином порыве.</p>
+        </div>
+      </div>
+    </div>
+
     <home-tags-list class="xl:mt-16 lg:mt-8 mt-5 justify-center"/>
 
     <home-news-list class="xl:my-20 lg:my-10 my-8"/>
@@ -100,5 +112,8 @@ onMounted(async () => {
   min-width: 100%;
   min-height: 300px;
   object-fit: cover;
+}
+.about-us {
+  background-image: url("@/assets/img/about-bg.png");
 }
 </style>
