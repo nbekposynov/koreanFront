@@ -44,7 +44,7 @@ onMounted(async () => {
 
     <div class="about-us">
       <div class="md:grid grid-cols-[300px_1fr] gap-10 py-5 container">
-        <div class="flex h-[300px] w-[300px] items-center justify-center overflow-hidden">
+        <div class="flex h-[250px] w-[250px] mx-auto items-center justify-center overflow-hidden">
           <img class="w-[200%] max-w-none" src="@/assets/img/logo.png" alt="">
         </div>
         <div>
@@ -56,7 +56,17 @@ onMounted(async () => {
 
     <home-tags-list class="xl:mt-16 lg:mt-8 mt-5 justify-center"/>
 
-    <home-news-list class="xl:my-20 lg:my-10 my-8"/>
+    <home-news-list class="xl:my-20 lg:my-10 my-8 px-calc overflow-visible"/>
+
+    <div class="ilbo">
+      <div class="container py-28 text-secondary text-2xl flex flex-col gap-12">
+        <h3 class="text-5xl font-medium">Коре Ильбо</h3>
+
+        <p>«Коре ильбо» является старейшим корейским печатным изданием за пределами Корейского полуострова. Газета основана на Дальнем Востоке СССР в 1923 году. Первоначально называлась «Сенбон» (Авангард). После депортации корейцев с Дальнего Востока издание газеты было возобновлено в Кызыл-Орде с 15 мая 1938 года под названием «Ленин кичи» (Ленинское знамя). </p>
+
+        <a href="#" class="text-[#5E7EEF] underline">Перейти на сайт</a>
+      </div>
+    </div>
 
     <div v-if="homeAlbum.length" class="container lg:grid grid-cols-[50%_40%] flex flex-col max-lg:container md:gap-14 gap-10 overflow-hidden px-10 py-9">
       <div>
@@ -115,5 +125,8 @@ onMounted(async () => {
 }
 .about-us {
   background-image: url("@/assets/img/about-bg.png");
+}
+.ilbo {
+  background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("@/assets/img/kore-ilbo-bg.png");
 }
 </style>
