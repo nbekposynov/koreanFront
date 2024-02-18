@@ -56,7 +56,7 @@ onMounted(async () => {
 
     <home-tags-list class="xl:mt-16 lg:mt-8 mt-5 justify-center"/>
 
-    <home-news-list class="xl:my-20 lg:my-10 my-8 px-calc overflow-visible"/>
+    <home-news-list class="xl:my-20 lg:my-10 my-8 px-calc overflow-hidden"/>
 
     <div class="ilbo">
       <div class="container py-28 text-secondary text-2xl flex flex-col gap-12">
@@ -64,7 +64,7 @@ onMounted(async () => {
 
         <p>«Коре ильбо» является старейшим корейским печатным изданием за пределами Корейского полуострова. Газета основана на Дальнем Востоке СССР в 1923 году. Первоначально называлась «Сенбон» (Авангард). После депортации корейцев с Дальнего Востока издание газеты было возобновлено в Кызыл-Орде с 15 мая 1938 года под названием «Ленин кичи» (Ленинское знамя). </p>
 
-        <a href="#" class="text-[#5E7EEF] underline">Перейти на сайт</a>
+        <a href="https://koreilbo.com/" target="_blank" class="text-[#5E7EEF] underline">Перейти на сайт</a>
       </div>
     </div>
 
