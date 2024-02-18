@@ -74,7 +74,7 @@ watch(getNewsBy, () =>{
 </script>
 
 <template>
-  <section>
+  <section class="news-list-grid">
     <div class="flex flex-col md:flex-row items-start justify-between md:gap-10 gap-6 lg:mt-24 md:mt-16 mt-10 container">
       <div class="md:w-[55%] rounded-3xl overflow-hidden flex items-center justify-center">
         <img v-if="latest?.image" class="min-w-full min-h-full object-cover" :src="latest?.image" alt="">
@@ -87,7 +87,7 @@ watch(getNewsBy, () =>{
       </div>
     </div>
     <div class="lg:mt-20 md:mt-14 mt-10">
-      <h3 class="title container">Новости</h3>
+      <h3 class="title container">Новости 🔥</h3>
 <!--      <filters-list :filters="filters" @filter="getNewsBy.filter = $event.value" class="md:mt-10 mt-5 px-calc"/>-->
 <!--      <categories :categories="categories" @category="getNewsBy.category = $event.value" class="px-calc"/>-->
       <div v-if="notFound" class="text-3xl font-bold w-full h-[25vw] flex items-center justify-center">К сожалению ничего не найдено</div>
@@ -97,5 +97,14 @@ watch(getNewsBy, () =>{
 </template>
 
 <style scoped>
+.news-list-grid {
+  background-image: url('@/assets/img//news-bg.png');
+  background-size: 60%;
+  background-position: right 55%;
+  background-repeat: no-repeat;
 
+  @media (max-width: 768px) {
+    background-position: right 35%;
+  }
+}
 </style>

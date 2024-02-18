@@ -46,7 +46,7 @@ const showMenu = useBreakpoint(1200)
         <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/news">Новости</router-link>
         <router-link class="whitespace-nowrap transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/ilbo">Коре ильбо</router-link>
         <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/library">Библиотека</router-link>
-        <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="">Галерея</router-link>
+        <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/gallery">Галерея</router-link>
       </nav>
 
       <!--      <nav-->

@@ -43,8 +43,8 @@ function handleGoToGallery(id) {
 </script>
 
 <template>
-  <section class="lg:pt-24 md:pt-16 pt-8">
-    <h1 class="title container">Коре Ильбо</h1>
+  <section class="md:pt-24 pt-8">
+    <h1 class="title container bg">Галерея</h1>
 
     <filters-list class="lg:mt-10 md:mt-8 mt-6 px-calc" :filters="years" :key="years" @filter="selectedYear = $event.value"/>
 

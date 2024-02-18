@@ -3,6 +3,7 @@ import FiltersList from "@/widgets/FiltersList.vue";
 import IconLocation from "@/components/icon/location.vue";
 import IconPhone from "@/components/icon/phone.vue";
 import IconEmail from "@/components/icon/email.vue";
+import Map from "@/components/Map.vue";
 import {onMounted, ref, watch} from "vue";
 import { useHttp } from "@/composables/useHttp.js";
 const { getCities, getBranch } = useHttp()
@@ -25,8 +26,8 @@ watch(selectedCityId, async (val) => {
   <section class="lg:pt-24 md:pt-16 pt-8 flex flex-col lg:gap-20 md:gap-14 gap-8">
    <h1 class="title container">Контакты и Региональные подразделения АКК</h1>
     <filters-list v-if="cities.length" :filters="cities" :field="'name'" @filter="selectedCityId = $event.id" class="px-calc"/>
-    <div class="container grid md:grid-cols-2 gap-9 lg:text-2xl md:text-xl text-base">
-      <div v-for="item in contacts" class="flex flex-col gap-3.5">
+    <div v-for="item in contacts" class="container grid md:grid-cols-2 gap-9 lg:text-2xl md:text-xl text-base">
+      <div class="flex flex-col gap-3.5">
         <p class="font-bold">{{ item.name }}</p>
         <div class="flex gap-3.5">
           <icon-location/>
@@ -41,6 +42,8 @@ watch(selectedCityId, async (val) => {
           <p class="pointer-events-none">{{ item.email }}</p>
         </a>
       </div>
+      
+      <Map :coords="[item.latitude, item.longitude]"/>
     </div>
   </section>
 </template>

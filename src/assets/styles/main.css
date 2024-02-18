@@ -46,3 +46,11 @@ a {
         background: #E0E0E0 !important;
     }
 }
+
+.title.bg {
+    background-image: url("@/assets/img/title-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
