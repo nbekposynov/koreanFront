@@ -42,7 +42,7 @@ onMounted(async () => {
       <div class="swiper-pagination"></div>
     </swiper>
 
-    <div class="about-us">
+    <div id="about" class="about-us">
       <div class="md:grid grid-cols-[300px_1fr] gap-10 py-5 container">
         <div class="flex h-[250px] w-[250px] mx-auto items-center justify-center overflow-hidden">
           <img class="w-[200%] max-w-none" src="@/assets/img/logo.png" alt="">

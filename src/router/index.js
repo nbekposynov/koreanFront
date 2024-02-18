@@ -16,7 +16,7 @@ const router = createRouter({
     {
       path: '/association/:id',
       name: 'associations-item',
-      component: () => import('../pages/Associations/Item.vue')
+      component: () => import('../pages/Associations/item-new.vue')
     },
     {
       path: '/association/2',

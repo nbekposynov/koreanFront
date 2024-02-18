@@ -17,7 +17,7 @@ const showMenu = useBreakpoint(1200)
     <nav v-if="!showMenu" class="flex justify-between gap-6">
       <router-link to="/associations" class="whitespace-pre text-2xl font-bold">Ассоциация корейцев Казахстана</router-link>
       <div class="h-6 w-[2px] bg-secondary mr-auto"></div>
-      <a href="#">О Нас</a>
+      <a href="/#about">О Нас</a>
       <router-link to="/news">Новости</router-link>
       <router-link to="/ilbo" class="whitespace-nowrap">“Коре Ильбо”
         100 лет</router-link>
