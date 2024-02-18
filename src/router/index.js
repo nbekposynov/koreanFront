@@ -58,10 +58,20 @@ const router = createRouter({
       name: 'search',
       component: () => import('../pages/News/Search.vue')
     },
+    // {
+    //   path: '/ilbo',
+    //   name: 'ilbo',
+    //   component: () => import('../pages/Ilbo.vue')
+    // },
     {
       path: '/ilbo',
       name: 'ilbo',
-      component: () => import('../pages/Ilbo.vue')
+      component: () => import('../pages/Ilbo100/List.vue')
+    },
+    {
+      path: '/ilbo/:id',
+      name: 'ilbo-item',
+      component: () => import('../pages/Ilbo100/Item.vue')
     },
     {
       path: '/library',

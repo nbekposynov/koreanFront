@@ -74,7 +74,7 @@ watch(getNewsBy, () =>{
 </script>
 
 <template>
-  <section class="news-list-grid">
+  <section class="news-list-grid md:pt-16 pt-8">
     <div class="flex flex-col md:flex-row items-start justify-between md:gap-10 gap-6 lg:mt-24 md:mt-16 mt-10 container">
       <div class="md:w-[55%] rounded-3xl overflow-hidden flex items-center justify-center">
         <img v-if="latest?.image" class="min-w-full min-h-full object-cover" :src="latest?.image" alt="">

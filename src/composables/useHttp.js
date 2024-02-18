@@ -69,6 +69,16 @@ export const useHttp = () => {
         return res.data
     }
 
+    async function getKoreIlbo(page) {
+        const res = await http.get(`api/koreilbos?page=${page}`);
+        return res.data
+    }
+
+    async function getOneKoreIlbo(id) {
+        const res = await http.get(`api/koreilbos/${id}`);
+        return res.data
+    }
+
     return {
         getAlbum,
         getNews,
@@ -81,6 +91,8 @@ export const useHttp = () => {
         getCities,
         getBranch,
         sendPhone,
-        getHomeAlbum
+        getHomeAlbum,
+        getKoreIlbo,
+        getOneKoreIlbo
     }
 }
