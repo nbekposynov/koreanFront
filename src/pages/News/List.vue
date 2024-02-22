@@ -99,7 +99,7 @@ watch(getNewsBy, () =>{
 <style scoped>
 .news-list-grid {
   background-image: url('@/assets/img//news-bg.png');
-  background-size: 60%;
+  background-size: 50%;
   background-position: right 55%;
   background-repeat: no-repeat;
 

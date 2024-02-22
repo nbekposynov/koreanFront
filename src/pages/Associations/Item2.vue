@@ -4,6 +4,7 @@ import IconClose from "@/components/icon/close.vue";
 
 <template>
   <teleport to="body">
+    <div class="text-center-mobile">
     <section class="absolute top-0 w-[100%] h-fit z-[101] bg-lighter">
       <div class="container">
         <div class="flex justify-between items-center lg:py-12 py-6">
@@ -11,7 +12,6 @@ import IconClose from "@/components/icon/close.vue";
           <icon-close @click="$router.go(-1)"/>
         </div>
                 <div class="flex flex-col md:gap-11 gap-5">
-          <!-- Первый блок с изображением и текстом -->
           <div class="flex flex-row items-start gap-4">
             <img alt="Шин Юрий Германович" class="flex-none w-128 h-128 object-cover" src="@/assets/img/mock/IMG_20221202_140147_036.jpg">
             <div class="flex-grow">
@@ -285,10 +285,28 @@ import IconClose from "@/components/icon/close.vue";
 
          
     </section>
+    </div>
+
   </teleport>
 </template>
 
 <style scoped>
+@media (max-width: 768px) { /* Предполагаем, что 768px - это максимальная ширина мобильных устройств */
+  .text-center-mobile { /* Класс, который будет применять выравнивание текста по центру */
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) { /* Предполагаем, что 768px - это максимальная ширина мобильных устройств */
+  .flex-row.items-start {
+    flex-direction: column; /* Меняем направление на вертикальное */
+    align-items: center; /* Центрируем элементы в контейнере для лучшего вида */
+  }
+  img {
+    width: 90%; /* Подгоняем ширину изображения под размер экрана */
+    height: auto; /* Сохраняем пропорции изображения */
+  }
+}
 
 </style>
 

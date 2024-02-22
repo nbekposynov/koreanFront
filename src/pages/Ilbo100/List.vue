@@ -22,7 +22,7 @@ async function getData(page = 1) {
 </script>
 
 <template>
-<section class="container md:pt-24 pt-8 font-sans w-fit ml-0">
+<section class="container md:pt-24 pt-8 font-sans w-fit">
   <h1 class="text-5xl font-extralight">100 лет Коре Ильбо</h1>
 
   <div class="mt-[45px]">
@@ -32,15 +32,16 @@ async function getData(page = 1) {
       </div>
       <router-link :to="`/ilbo/${koreIlbofirst?.id}`">
         <h3 class="text-3xl mb-2.5">{{ koreIlbofirst?.name }}</h3>
-        <p class="text-xl">{{ koreIlbofirst?.desc }}</p>
+        <div class="text-xl" v-html="koreIlbofirst?.desc" ></div>
       </router-link>
     </div>
   </div>
   <div class="grid justify-center lg:grid-cols-3 sm:grid-cols-2 mt-12 gap-6 gap-y-10 mb-20">
     <router-link :to="`/ilbo/${item.id}`" v-for="item in koreIlbo.data" class="w-fit">
-      <div class="w-[280px] h-[205px] flex items-center justify-center overflow-hidden">
-        <img :src="item?.image" :alt="item?.name">
-      </div>
+        <div class="w-[280px] h-[205px] flex items-center justify-center overflow-hidden">
+          <img v-if="item?.image" :src="item.image" :alt="item?.name">
+          <img v-else src="@/assets/img/koreans.png" alt="Default Image">
+        </div>
       <h3 class="text-base font-bold mt-2.5">{{ item?.name }}</h3>
     </router-link>
   </div>

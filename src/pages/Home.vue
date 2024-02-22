@@ -28,7 +28,7 @@ onMounted(async () => {
 
 <template>
   <section class="lg:mb-40 md:mb-24 mb-12">
-    <swiper v-if="album[0]"
+<swiper v-if="album[0]"
         :pagination="pagination" :modules="modules" :loop="true"
         :autoplay="{
           delay: 3000,
@@ -36,11 +36,20 @@ onMounted(async () => {
         }"
         class="max-h-[610px]"
     >
-      <swiper-slide v-for="img in album[0]?.photos">
-        <img class="min-h-full min-w-full" :src="img?.image_path" alt="">
-      </swiper-slide>
-      <div class="swiper-pagination"></div>
-    </swiper>
+    <!-- Слайд с первым изображением -->
+    <swiper-slide>
+        <img class="min-h-full min-w-full" src="../assets/img/mock/image 3.png" alt="">
+    </swiper-slide>
+    <!-- Слайд со вторым изображением -->
+    <swiper-slide>
+        <img class="min-h-full min-w-full" src="../assets/img/mock/image 4.png" alt="">
+    </swiper-slide>
+    <!-- Слайд с третьим изображением -->
+    <swiper-slide>
+        <img class="min-h-full min-w-full" src="../assets/img/mock/main-slider.png" alt="">
+    </swiper-slide>
+    <div class="swiper-pagination"></div>
+</swiper>
 
     <div id="about" class="about-us">
       <div class="md:grid grid-cols-[300px_1fr] gap-10 py-5 container">
@@ -54,10 +63,11 @@ onMounted(async () => {
       </div>
     </div>
 
+  <div id="associations" class="associations">
     <home-tags-list class="xl:mt-16 lg:mt-8 mt-5 justify-center"/>
 
     <home-news-list class="xl:my-20 lg:my-10 my-8 px-calc overflow-hidden"/>
-
+</div>
     <div class="ilbo">
       <div class="container py-28 text-secondary text-2xl flex flex-col gap-12">
         <h3 class="text-5xl font-medium">Коре Ильбо</h3>
@@ -68,15 +78,15 @@ onMounted(async () => {
       </div>
     </div>
 
-    <div v-if="homeAlbum.length" class="container lg:grid grid-cols-[50%_40%] flex flex-col max-lg:container md:gap-14 gap-10 overflow-hidden px-10 py-9">
-      <div>
+    <!-- <div v-if="homeAlbum.length" class="container lg:grid grid-cols-[50%_40%] flex flex-col max-lg:container md:gap-14 gap-10 overflow-hidden px-10 py-9"> -->
+      <!-- <div>
         <div class="flex md:gap-16 gap-5 w-fit">
-          <div v-if="homeAlbum[0].image_path" class="rounded-full w-[160px] overflow-hidden shadow-custom flex justify-center">
-            <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[0].image_path" alt="">
-          </div>
-          <div v-if="homeAlbum[1].image_path" class="rounded-full w-fit overflow-hidden shadow-custom flex justify-center">
-            <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[1].image_path" alt="">
-          </div>
+            <div v-if="homeAlbum[0].image_path" class="rounded-full w-[160px] overflow-hidden shadow-custom flex justify-center hide-on-mobile">
+              <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[0].image_path" alt="">
+            </div>
+            <div v-if="homeAlbum[1].image_path" class="rounded-full w-fit overflow-hidden shadow-custom flex justify-center hide-on-mobile">
+              <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[1].image_path" alt="">
+            </div>
         </div>
         <div v-if="homeAlbum[2].image_path" class="lg:mt-24 md:mt-16 mt-12 sm:rounded-[90px] rounded-[50px] lg:w-[40vw]">
           <div class="sm:rounded-[50px] rounded-[24px] overflow-hidden">
@@ -95,15 +105,43 @@ onMounted(async () => {
         </div>
 
         <div class="flex md:gap-16 gap-5 w-fit lg:mt-40 mg:mt-20 mt-10">
-          <div v-if="homeAlbum[3].image_path" class="rounded-full w-fit overflow-hidden shadow-custom flex justify-center">
+          <div v-if="homeAlbum[3].image_path" class="rounded-full w-fit overflow-hidden shadow-custom flex justify-center hide-on-mobile">
             <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[3].image_path" alt="">
           </div>
-          <div v-if="homeAlbum[4].image_path" class="rounded-full overflow-hidden shadow-custom w-[160px] flex justify-center">
+          <div v-if="homeAlbum[4].image_path" class="rounded-full overflow-hidden shadow-custom w-[160px] flex justify-center hide-on-mobile">
             <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[4].image_path" alt="">
           </div>
         </div>
-      </div>
-    </div>
+      </div> -->
+
+<div v-if="homeAlbum.length" class="container lg">
+
+  <div class="bg-custom p-8 w-full rounded-lg mt-32 mx-auto"> <!-- Измененные классы здесь -->
+<div class="font-bold text-3xl mb-4 text-center md:text-left md:pl-20">Галерея</div>
+        <div class="flex flex-wrap justify-center gap-8"> <!-- Используйте flex и justify-center -->
+            <div v-if="homeAlbum[0].image_path" class="w-[250px] h-[250px] overflow-hidden shadow-custom flex justify-center  rounded-lg"> <!-- Изменено на w-full -->
+              <img :src="homeAlbum[0].image_path" alt="Описание изображения 1" class="w-full h-full object-cover">
+            </div>        
+        
+            <div v-if="homeAlbum[1].image_path" class="w-[250px] h-[250px] overflow-hidden shadow-custom flex justify-center hide-on-mobile rounded-lg"> <!-- Изменено на w-full -->
+              <img :src="homeAlbum[1].image_path" alt="Описание изображения 2" class="w-full h-full object-cover">
+            </div>  
+            <div v-if="homeAlbum[2].image_path" class="w-[250px] h-[250px] overflow-hidden shadow-custom flex justify-center hide-on-mobile rounded-lg"> <!-- Изменено на w-full -->
+              <img :src="homeAlbum[2].image_path" alt="Описание изображения 3" class="w-full h-full object-cover">
+            </div>            
+            <div v-if="homeAlbum[3].image_path" class="w-[250px] h-[250px] overflow-hidden shadow-custom flex justify-center hide-on-mobile rounded-lg"> <!-- Изменено на w-full -->
+              <img :src="homeAlbum[3].image_path" alt="Описание изображения 4" class="w-full h-full object-cover">
+            </div>
+        </div>
+         
+          <div class="flex justify-center mt-10">
+            <router-link to="/gallery" class="bg-primary text-center text-secondary py-3.5 px-9 text-2xl rounded-full w-62">Посмотреть всю галерею</router-link>
+          </div>         
+  </div>
+
+
+</div>
+
   </section>
 </template>
 
@@ -118,6 +156,18 @@ onMounted(async () => {
   overflow: hidden;
 }
 
+#about, #associations {
+  position: relative;
+}
+
+#about::before, #associations::before {
+  content: "";
+  display: block;
+  height: 100px; /* Высота отступа, может быть адаптирована под вашу шапку */
+  margin: -100px 0 0; /* Отрицательный маржин для компенсации высоты */
+}
+
+
 .swiper-slide img {
   min-width: 100%;
   min-height: 300px;
@@ -129,4 +179,11 @@ onMounted(async () => {
 .ilbo {
   background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("@/assets/img/kore-ilbo-bg.png");
 }
+
+@media (max-width: 1024px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
 </style>

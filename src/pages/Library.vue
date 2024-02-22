@@ -1,8 +1,9 @@
 <script setup>
 import {useHttp} from "@/composables/useHttp.js";
 import {onMounted, ref} from "vue";
+import IconDownload from "@/components/icon/download.vue";
 
-const { getBooks } = useHttp()
+const { getBooks, downloadMagazine  } = useHttp()
 
 const books = ref([])
 
@@ -33,6 +34,9 @@ async function handleDownloadMagazine(id) {
     console.error("Ошибка при скачивании журнала: ", error);
   }
 }
+onMounted(async () => {
+  magazines.value = await getMagazines(selectedYear.value)
+})
 </script>
 
 <template>
@@ -45,10 +49,9 @@ async function handleDownloadMagazine(id) {
           <img v-else class="min-w-full min-h-full" src="@/assets/img/mock/book.png" alt="">
         </div>
         <p class="lg:text-4xl md:text-2xl text-xl font-bold">{{ item.name }}</p>
-<!--        <p class="text-xl flex gap-6">-->
-<!--          <span>By </span>-->
-<!--          <span class="text-light">Автор</span>-->
-<!--        </p>-->
+       <p class="text-xl flex gap-6">
+          <icon-download @click="handleDownloadMagazine(item.id)" class="icon-black"/>
+        </p>
       </div>
     </div>
   </section>

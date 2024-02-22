@@ -15,17 +15,17 @@ import AppFooter from "@/components/AppFooter.vue";
   </div>
 </template>
 <style scoped>
-.main {
+/* .main {
   padding-top: 8.063rem;
-}
-@media (max-width: 1024px) {
+} */
+/* @media (max-width: 1024px) {
   .main {
     padding-top: 70px;
   }
-}
+} */
 @media (max-width: 768px) {
   .main {
-    padding-top: 53px;
+    padding-bottom: 53px;
   }
 }
 </style>

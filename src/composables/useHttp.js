@@ -5,7 +5,7 @@ export const useHttp = () => {
     axios.defaults.headers.common['ngrok-skip-browser-warning'] = '69420';
 
     const http = axios.create({
-        baseURL: 'https://8deb-81-88-147-52.ngrok-free.app/'
+        baseURL: 'http://localhost:8000/'
     });
 
     async function getAlbum() {
@@ -40,7 +40,8 @@ export const useHttp = () => {
     }
 
     async function downloadMagazine(id) {
-        const res = await http.get(`api/magazines/download/${id}`, {headers: {'Content-Type': 'application/pdf'}});
+        const res = await http.get(`api/book/download/${id}`, { responseType: 'blob' });
+        console.log(res)
         return res.data
     }
 

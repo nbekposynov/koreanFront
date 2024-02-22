@@ -88,7 +88,10 @@ watch(getNewsBy, () =>{
 .news-list {
   background-image: url('@/assets/img//news-bg.png');
   background-size: contain;
-  background-position: right;
+  background-size: 100%;
+  background-position: 97% ;
   background-repeat: no-repeat;
+  background-size: contain;
+
 }
 </style>

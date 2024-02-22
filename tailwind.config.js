@@ -11,6 +11,8 @@ module.exports = {
         lighter: '#F2F2F2',
         semilight: '#9B9B9B',
         dark: '#000000',
+        custom: '#F8F8F8',
+
       },
       spacing: {
         calc: 'max((100vw - 1368px) / 2, 2.5rem)'

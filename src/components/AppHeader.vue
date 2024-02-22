@@ -9,20 +9,19 @@ const showMenu = useBreakpoint(1200)
 
 <template>
 <header>
-  <div class="container font-[Comfortaa] relative flex lg:justify-between items-center gap-3 lg:p-2.5 md:p-5 p-2.5 text-secondary">
+<div class="container font-[Comfortaa] relative flex lg:justify-between items-center gap-3 lg:p-2.5 md:p-5 p-2.5 text-secondary">
     <router-link to="/" class="flex justify-center items-center md:min-w-[100px] min-w-[50px] md:w-[100px] md:h-[100px] w-[50px] h-[50px] overflow-hidden">
       <img class="max-w-none w-[250%]" src="@/assets/img/logo.png" alt="">
     </router-link>
 
     <nav v-if="!showMenu" class="flex justify-between gap-6">
-      <router-link to="/associations" class="whitespace-pre text-2xl font-bold">Ассоциация корейцев Казахстана</router-link>
-      <div class="h-6 w-[2px] bg-secondary mr-auto"></div>
-      <a href="/#about">О Нас</a>
-      <router-link to="/news">Новости</router-link>
-      <router-link to="/ilbo" class="whitespace-nowrap">“Коре Ильбо”
-        100 лет</router-link>
-      <router-link to="/library">Библиотека</router-link>
-      <router-link to="/gallery">Галерея</router-link>
+      <a href="/#associations" class="whitespace-pre text-2xl font-bold">Ассоциация корейцев Казахстана</a>
+      <div class="h-6 w-[2px] bg-secondary mr-auto mr-10"></div>
+      <a href="/#about" class="text-xl font-bold">О Нас</a>
+      <router-link to="/news" class="text-xl font-bold">Новости</router-link>
+      <router-link to="/ilbo" class="whitespace-nowrap text-xl font-bold">“Коре Ильбо” 100 лет</router-link>
+      <router-link to="/library" class="text-xl font-bold">Библиотека</router-link>
+      <router-link to="/gallery" class="text-xl font-bold">Галерея</router-link>
     </nav>
 
 
@@ -42,7 +41,7 @@ const showMenu = useBreakpoint(1200)
           class="w-[100vw] flex flex-col justify-center gap-10 bg-primary text-secondary xs:px-20 sm:px-10 px-5 text-3xl fixed top-0 right-0 transition-all duration-300 ease-in h-0 overflow-hidden shadow-primary shadow-lg"
           :class="{ 'h-[100vh] lg:py-10 md:py-5 py-20' : openMenu }"
       >
-        <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/associations">Ассоциация корейцев Казахстана</router-link>
+        <a class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" href="/#associations">Ассоциация корейцев Казахстана</a>
         <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/news">Новости</router-link>
         <router-link class="whitespace-nowrap transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/ilbo">Коре ильбо</router-link>
         <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/library">Библиотека</router-link>
@@ -74,9 +73,11 @@ header {
   background-repeat: repeat-x;
   background-size: cover;
   background-color: #0147ce;
-  position: absolute;
+  position: sticky; /* Изменено с absolute на sticky */
+  top: 0; /* Добавлено для "прилипания" к верху */
   width: 100%;
   z-index: 100;
+  
 }
 .burger-menu__btn {
   position: relative;
