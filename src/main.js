@@ -9,6 +9,6 @@ import { createYmaps } from 'vue-yandex-maps';
 
 const app = createApp(App)
 
-app.use(router).use(VueTheMask).use(createYmaps({ apikey: 'your-api-key', }))
+app.use(router).use(VueTheMask).use(createYmaps({ apikey: '3a9af56b-204b-4813-8d21-bf839ccffaf5', }))
 
 app.mount('#app')
