@@ -34,7 +34,7 @@ onMounted(async () => {
           delay: 3000,
           disableOnInteraction: false,
         }"
-        class="max-h-[610px]"
+        class="max-h-[590px]"
     >
     <!-- Слайд с первым изображением -->
     <swiper-slide>
@@ -143,6 +143,7 @@ onMounted(async () => {
 </div>
 
   </section>
+  
 </template>
 
 <style scoped>
@@ -178,6 +179,7 @@ onMounted(async () => {
 }
 .ilbo {
   background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url("@/assets/img/kore-ilbo-bg.png");
+  background-size: cover;
 }
 
 @media (max-width: 1024px) {

@@ -13,6 +13,7 @@
     "normalize.css": "^8.0.1",
     "swiper": "^11.0.5",
     "vue": "^3.3.11",
+    "vue-meta": "^3.0.0-alpha.2",
     "vue-router": "^4.2.5",
     "vue-the-mask": "^0.11.1",
     "vue-yandex-maps": "^2.0.0"

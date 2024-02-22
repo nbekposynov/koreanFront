@@ -27,13 +27,13 @@ async function handleSendPhone() {
     </form>
   </div>
   <div class="md:mt-8 mt-5 flex sm:flex-row flex-col gap-4">
-    <div class="w-[30%] flex flex-col justify-between">
+    <div class="w-[30%] flex flex-col justify-between font-medium text-[13px]">
       <div>
-        <p class="uppercase font-medium text-[9px] opacity-[0.4]">ДОПОЛНИТЕЛЬНО</p>
+        <p class="uppercase font-medium text-[13px] opacity-[0.4]">ДОПОЛНИТЕЛЬНО</p>
         <div class="text-xs mt-4 opacity-[0.8]">
-          <router-link to="/contacts" class="block decoration-0">Контакты и региональные подразделения АКК</router-link>
-          <router-link to="/news" class="block decoration-0">Новости</router-link>
-          <router-link to="/gallery" class="block decoration-0">Галерея</router-link>
+          <router-link to="/contacts" class="block decoration-0 font-medium text-[13px]">Контакты и региональные подразделения АКК</router-link><br/>
+          <router-link to="/news" class="block decoration-0 font-medium text-[13px]">Новости</router-link><br/>
+          <router-link to="/gallery" class="block decoration-0 font-medium text-[13px]">Галерея</router-link><br/>
         </div>
       </div>
       <p class="text-xs font-medium opacity-[0.4] justify-end">© 2023 — Copyright</p>
@@ -41,12 +41,12 @@ async function handleSendPhone() {
     <div class="md:w-[70%] w-full">
       <div class="flex md:gap-16 gap-8 md:flex-row flex-col">
         <div>
-          <p class="uppercase font-medium text-[9px] opacity-[0.4]">карта сайта</p>
+          <p class="uppercase font-medium text-[13px] opacity-[0.4]">карта сайта</p>
           <div class="text-xs mt-4 opacity-[0.8]">
-            <a href="/associations" class="decoration-0">Ассоциация корецев Казахстана</a>
-            <router-link to="/news" class="decoration-0">Корейские новости</router-link>
-            <router-link to="/ilbo" class="decoration-0">Коре ильбо</router-link>
-            <router-link to="/library" class="decoration-0">Библиотека</router-link>
+            <a href="/associations" class="decoration-0 font-medium text-[13px]">Ассоциация корецев Казахстана</a><br/>
+            <router-link to="/news" class="decoration-0 font-medium text-[13px]">Корейские новости</router-link><br/>
+            <router-link to="/ilbo" class="decoration-0 font-medium text-[13px]">Коре ильбо</router-link><br/>
+            <router-link to="/library" class="decoration-0 font-medium text-[13px]">Библиотека</router-link><br/>
           </div>
         </div>
         <div>
@@ -55,9 +55,9 @@ async function handleSendPhone() {
           </router-link>
           <div class="mt-4 flex gap-12">
             <div>
-              <a href="tel:+7 777 77 77" class="text-xs">+7 777 77 77</a>
-              <a href="mailto:roo_akk@mail.ru" class="underline text-xs">roo_akk@mail.ru</a>
-              <a href="mailto:info@koreans.kz" class="underline text-xs">info@koreans.kz</a>
+              <a href="tel:+7 777 77 77" class="font-medium text-[13px]">+7 777 77 77</a>
+              <a href="mailto:roo_akk@mail.ru" class="underline font-medium text-[13px]">roo_akk@mail.ru</a>
+              <a href="mailto:info@koreans.kz" class="underline font-medium text-[13px]">info@koreans.kz</a>
             </div>
             <div class="flex flex-col gap-3">
               <icon-telegram class="text-xs"/>
@@ -67,16 +67,16 @@ async function handleSendPhone() {
         </div>
       </div>
 
-      <div class="text-xs lg:mt-8 md:mt-6 mt-4">
+      <div class="font-medium text-[13px] lg:mt-8 md:mt-6 mt-4">
         <div class="flex justify-between gap-2.5 lg:mt-20 md:mt-15 mt-10">
-          <div class="text-xs flex gap-3">
-            <router-link to="/" class="text-xs">Главная страница</router-link>
-            <span class="opacity-[0.2]">/</span>
-            <router-link to="/news" class="text-xs">Новости</router-link>
-            <span class="opacity-[0.2]">/</span>
-            <router-link to="/contacts" class="text-xs">Контакты</router-link>
+          <div class="font-medium text-[13px] flex gap-3">
+            <router-link to="/" class="font-medium text-[13px]">Главная страница</router-link><br/>
+            <span class="opacity-[0.2]">/</span><br/>
+            <router-link to="/news" class="font-medium text-[13px]">Новости</router-link><br/>
+            <span class="opacity-[0.2]">/</span><br/>
+            <router-link to="/contacts" class="font-medium text-[13px]">Контакты</router-link><br/>
           </div>
-          <p class="text-xs opacity-[0.4] font-medium">Privacy</p>
+          <p class="font-medium text-[13px] opacity-[0.4] font-medium">Privacy</p>
         </div>
       </div>
     </div>

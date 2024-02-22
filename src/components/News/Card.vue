@@ -53,4 +53,7 @@ function formatTime(hours, minutes) {
 .news-card:hover > span{
   box-shadow: 0px 0px 8px 0px #001D3E inset;
 }
+
+
+
 </style>

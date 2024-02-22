@@ -65,9 +65,15 @@ export const useHttp = () => {
         return res.data
     }
 
-    async function getHomeAlbum(data) {
-        const res = await http.get(`api/getAlbumPhotoHome`);
-        return res.data
+    async function getHomeAlbum() {
+        try {
+            const res = await http.get(`api/getAlbumPhotoHome`);
+            return res.data;
+        } catch (error) {
+            console.error("Ошибка при получении данных альбома:", error);
+            // Обработайте ошибку соответствующим образом
+            return null; // или другое значение по умолчанию
+        }
     }
 
     async function getKoreIlbo(page) {

@@ -7,7 +7,7 @@ import IconClose from "@/components/icon/close.vue";
     <section class="bg absolute top-0 w-[100%] h-fit z-[101] bg-secondary">
         <div class="bg-lighter">
           <div class="container m-auto flex justify-between items-center lg:py-12 py-6">
-            <h1 class="lg:text-5xl text-3xl">Структура АКК</h1>
+            <h1 class="lg:text-5xl text-3xl">Структура Ассоциация Корейцев Казахстана</h1>
             <icon-close @click="$router.go(-1)"/>
           </div>
         </div>
