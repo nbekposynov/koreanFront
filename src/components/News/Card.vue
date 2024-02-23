@@ -54,6 +54,20 @@ function formatTime(hours, minutes) {
   box-shadow: 0px 0px 8px 0px #001D3E inset;
 }
 
+@media (min-width: 768px) {
+  .news-card {
+    min-height: 450px; /* Фиксированная минимальная высота для больших экранов */
+    max-height: 450px;
+    overflow: hidden; /* Фиксированная максимальная высота для больших экранов */
+  }
+
+  .news-card__img img {
+    height: 350px;
+    object-fit: cover; /* Фиксированная высота для изображений на больших экранах */
+  }
+}
+
+
 
 
 </style>
