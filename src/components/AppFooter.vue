@@ -56,7 +56,7 @@ async function handleSendPhone() {
           </router-link>
           <div class="mt-4 flex gap-12">
             <div>
-              <a href="tel:+7 777 77 77" class="font-medium text-[13px]">+7 777 77 77</a>
+              <a href="tel:+7 701 478 1825" class="font-medium text-[13px]">+7 701 478 1825 </a>
               <a href="mailto:roo_akk@mail.ru" class="underline font-medium text-[13px]">roo_akk@mail.ru</a>
               <a href="mailto:info@koreans.kz" class="underline font-medium text-[13px]">info@koreans.kz</a>
             </div>
