@@ -14,6 +14,7 @@ onMounted(async () => {
 </script>
 
 <template>
+<div class="back">
 <section class="container md:pt-24 pt-8 font-sans w-fit ml-0">
   <h1 class="text-5xl font-extralight mb-11">{{ koreData?.name }}</h1>
 
@@ -26,8 +27,15 @@ onMounted(async () => {
   </div>
 </article>
 </section>
+</div>
 </template>
 
 <style scoped>
+.back {
+  background-image: url('@/assets/img/image 25.png');
+  background-size: cover; 
+  padding-bottom: 50px;
+
+}
 
 </style>

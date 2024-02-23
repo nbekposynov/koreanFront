@@ -54,19 +54,34 @@ function formatTime(hours, minutes) {
   box-shadow: 0px 0px 8px 0px #001D3E inset;
 }
 
+.news-card__title {
+  display: -webkit-box; /* Используется для поддержки свойства -webkit-line-clamp */
+  -webkit-line-clamp: 2; /* Количество строк, после которых текст будет обрезан */
+  -webkit-box-orient: vertical;  
+  overflow: hidden; /* Скрывает текст, выходящий за пределы элемента */
+  text-overflow: ellipsis; /* Добавляет многоточие в конце обрезанного текста */
+  white-space: normal; /* Убедитесь, что white-space не установлен в nowrap */
+  line-height: 1.2em; /* Высота строки */
+  max-height: 2.4em; /* Максимальная высота, рассчитываемая как line-height * количество строк */
+}
+
+
 @media (min-width: 768px) {
   .news-card {
     min-height: 450px; /* Фиксированная минимальная высота для больших экранов */
     max-height: 450px;
+    min-width: 500px; /* Фиксированная минимальная высота для больших экранов */
+    max-width: 500px;
     overflow: hidden; /* Фиксированная максимальная высота для больших экранов */
   }
 
   .news-card__img img {
     height: 350px;
+    min-height: 350px;
+    max-height: 350px;
     object-fit: cover; /* Фиксированная высота для изображений на больших экранах */
   }
 }
-
 
 
 

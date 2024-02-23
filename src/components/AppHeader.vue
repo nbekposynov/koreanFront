@@ -10,7 +10,7 @@ const showMenu = useBreakpoint(1200)
 <template>
 <header>
 <div class="container font-[Comfortaa] relative flex lg:justify-between items-center gap-3 lg:p-2.5 md:p-5 p-2.5 text-secondary">
-    <router-link to="/" class="flex justify-center items-center md:min-w-[100px] min-w-[50px] md:w-[100px] md:h-[100px] w-[50px] h-[50px] overflow-hidden">
+    <router-link to="/" class="flex justify-center items-center md:min-w-[70px] min-w-[30px] md:w-[80px] md:h-[70px] w-[40px] h-[40px] overflow-hidden">
       <img class="max-w-none w-[250%]" src="@/assets/img/logo.png" alt="">
     </router-link>
 

@@ -17,7 +17,8 @@ async function handleSendPhone() {
 </script>
 
 <template>
-<footer class="lg:px-14 md:px-10 px-8 lg:mt-20 md:mt-16 mt-10 pb-6 bg-primary text-secondary">
+
+<footer class="lg:px-14 md:px-10 px-8  pb-6 bg-primary text-secondary">
   <div class="text-center md:py-8 py-5">
     <p class="lg:text-2xl md:text-xl text-lg">У вас есть вопросы?</p>
     <p class="text-sm mt-1">Вы можете написать нам</p>
@@ -55,7 +56,7 @@ async function handleSendPhone() {
           </router-link>
           <div class="mt-4 flex gap-12">
             <div>
-              <a href="tel:+7 777 77 77" class="font-medium text-[13px]">+7 777 77 77</a>
+              <a href="tel:+7 701 478 1825" class="font-medium text-[13px]">+7 701 478 1825 </a>
               <a href="mailto:roo_akk@mail.ru" class="underline font-medium text-[13px]">roo_akk@mail.ru</a>
               <a href="mailto:info@koreans.kz" class="underline font-medium text-[13px]">info@koreans.kz</a>
             </div>
@@ -85,12 +86,15 @@ async function handleSendPhone() {
 </template>
 
 <style scoped>
+
+
 * {
   font-family: 'Inter', sans-serif;
 }
 footer {
   background: url('@/assets/img/eagle.svg') no-repeat #032973;
   background-position: bottom 35% right 5%;
-  background-size: 19%; /* Уменьшено с 35% до 25% */
+  background-size: 19%;
+  margin-top: 20px; /* Уменьшено с 35% до 25% */
 }
 </style>

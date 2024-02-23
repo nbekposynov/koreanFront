@@ -31,7 +31,7 @@ onMounted(async () => {
 <swiper v-if="album[0]"
         :pagination="pagination" :modules="modules" :loop="true"
         :autoplay="{
-          delay: 3000,
+          delay: 4000,
           disableOnInteraction: false,
         }"
         class="max-h-[590px]"
@@ -78,58 +78,23 @@ onMounted(async () => {
       </div>
     </div>
 
-    <!-- <div v-if="homeAlbum.length" class="container lg:grid grid-cols-[50%_40%] flex flex-col max-lg:container md:gap-14 gap-10 overflow-hidden px-10 py-9"> -->
-      <!-- <div>
-        <div class="flex md:gap-16 gap-5 w-fit">
-            <div v-if="homeAlbum[0].image_path" class="rounded-full w-[160px] overflow-hidden shadow-custom flex justify-center hide-on-mobile">
-              <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[0].image_path" alt="">
-            </div>
-            <div v-if="homeAlbum[1].image_path" class="rounded-full w-fit overflow-hidden shadow-custom flex justify-center hide-on-mobile">
-              <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[1].image_path" alt="">
-            </div>
-        </div>
-        <div v-if="homeAlbum[2].image_path" class="lg:mt-24 md:mt-16 mt-12 sm:rounded-[90px] rounded-[50px] lg:w-[40vw]">
-          <div class="sm:rounded-[50px] rounded-[24px] overflow-hidden">
-            <img :src="homeAlbum[2].image_path" alt="">
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="flex flex-col gap-6">
-          <p class="text-4xl">Lorem ipsum</p>
-          <p class="text-2xl">Lorem ipsum dolor sit amet consectetur. In senectus non eget nunc suscipit morbi turpis. Ultricies placerat
-            sit arcu venenatis viverra enim sed cursus nam. Et mauris amet in id. Dolor adipiscing quis non proin in.
-            Adipiscing in elementum morbi sed nibh felis. Orci mi duis ut proin enim proin. Consequat maecenas quis sit
-            convallis aenean mattis.</p>
-          <router-link to="/gallery" class="bg-primary text-center text-secondary py-3.5 px-9 text-2xl rounded-full">Посмотреть всю галлерею</router-link>
-        </div>
 
-        <div class="flex md:gap-16 gap-5 w-fit lg:mt-40 mg:mt-20 mt-10">
-          <div v-if="homeAlbum[3].image_path" class="rounded-full w-fit overflow-hidden shadow-custom flex justify-center hide-on-mobile">
-            <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[3].image_path" alt="">
-          </div>
-          <div v-if="homeAlbum[4].image_path" class="rounded-full overflow-hidden shadow-custom w-[160px] flex justify-center hide-on-mobile">
-            <img class="md:h-[16vw] h-[40vw] max-w-none" :src="homeAlbum[4].image_path" alt="">
-          </div>
-        </div>
-      </div> -->
+<div v-if="homeAlbum.length" class=" mx-auto max-w-8xl" >
 
-<div v-if="homeAlbum.length" class="container lg">
-
-  <div class="bg-custom p-8 w-full rounded-lg mt-32 mx-auto"> <!-- Измененные классы здесь -->
-<div class="font-bold text-3xl mb-4 text-center md:text-left md:pl-20">Галерея</div>
+  <div class="bg-custom p-8 w-[100%] rounded-lg mt-32 mx-auto "> <!-- Измененные классы здесь -->
+<div class="font-bold text-4xl mb-4 text-center md:text-left md:pl-[4rem]">Галерея</div>
         <div class="flex flex-wrap justify-center gap-8"> <!-- Используйте flex и justify-center -->
-            <div v-if="homeAlbum[0].image_path" class="w-[250px] h-[250px] overflow-hidden shadow-custom flex justify-center  rounded-lg"> <!-- Изменено на w-full -->
+            <div v-if="homeAlbum[0].image_path" class="w-[320px] h-[320px] overflow-hidden shadow-custom flex justify-center  rounded-lg"> <!-- Изменено на w-full -->
               <img :src="homeAlbum[0].image_path" alt="Описание изображения 1" class="w-full h-full object-cover">
             </div>        
         
-            <div v-if="homeAlbum[1].image_path" class="w-[250px] h-[250px] overflow-hidden shadow-custom flex justify-center hide-on-mobile rounded-lg"> <!-- Изменено на w-full -->
+            <div v-if="homeAlbum[1].image_path" class="w-[320px] h-[320px] overflow-hidden shadow-custom flex justify-center hide-on-mobile rounded-lg"> <!-- Изменено на w-full -->
               <img :src="homeAlbum[1].image_path" alt="Описание изображения 2" class="w-full h-full object-cover">
             </div>  
-            <div v-if="homeAlbum[2].image_path" class="w-[250px] h-[250px] overflow-hidden shadow-custom flex justify-center hide-on-mobile rounded-lg"> <!-- Изменено на w-full -->
+            <div v-if="homeAlbum[2].image_path" class="w-[320px] h-[320px] overflow-hidden shadow-custom flex justify-center hide-on-mobile rounded-lg"> <!-- Изменено на w-full -->
               <img :src="homeAlbum[2].image_path" alt="Описание изображения 3" class="w-full h-full object-cover">
             </div>            
-            <div v-if="homeAlbum[3].image_path" class="w-[250px] h-[250px] overflow-hidden shadow-custom flex justify-center hide-on-mobile rounded-lg"> <!-- Изменено на w-full -->
+            <div v-if="homeAlbum[3].image_path" class="w-[320px] h-[320px] overflow-hidden shadow-custom flex justify-center hide-on-mobile  rounded-lg"> <!-- Изменено на w-full -->
               <img :src="homeAlbum[3].image_path" alt="Описание изображения 4" class="w-full h-full object-cover">
             </div>
         </div>
@@ -187,5 +152,8 @@ onMounted(async () => {
     display: none;
   }
 }
+
+
+
 
 </style>

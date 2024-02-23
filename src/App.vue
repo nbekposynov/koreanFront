@@ -14,18 +14,17 @@ import AppFooter from "@/components/AppFooter.vue";
     <app-footer v-if="!$route.path.includes('/gallery/')"/>
   </div>
 </template>
+
 <style scoped>
-/* .main {
-  padding-top: 8.063rem;
-} */
-/* @media (max-width: 1024px) {
-  .main {
-    padding-top: 70px;
-  }
-} */
-@media (max-width: 768px) {
-  .main {
-    padding-bottom: 53px;
-  }
+.flex.flex-col {
+  min-height: 100vh; /* установим высоту контейнера, чтобы он занимал всю высоту окна браузера */
+  position: relative; /* установим относительное позиционирование, чтобы абсолютно спозиционированный футер был относительно этого контейнера */
 }
+
+.app-footer {
+  position: absolute; /* абсолютное позиционирование футера */
+  bottom: 0; /* прикрепляем его к нижней части контейнера */
+  width: 100%; /* футер будет занимать всю ширину контейнера */
+}
+
 </style>

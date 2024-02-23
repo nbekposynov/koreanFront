@@ -22,6 +22,7 @@ async function getData(page = 1) {
 </script>
 
 <template>
+<div class="back">
 <section class="container md:pt-24 pt-8 font-sans w-fit">
   <h1 class="text-5xl font-extralight">100 лет Коре Ильбо</h1>
 
@@ -45,10 +46,15 @@ async function getData(page = 1) {
       <h3 class="text-base font-bold mt-2.5">{{ item?.name }}</h3>
     </router-link>
   </div>
-  <pagination class="mt-5" :total="koreIlbo.last_page" :current-page="koreIlbo.current_page" @page="getData($event)"/>
+  <pagination class="-mt-30" :total="koreIlbo.last_page" :current-page="koreIlbo.current_page" @page="getData($event)"/>
 </section>
+</div>
 </template>
 
 <style scoped>
+.back {
+  background-image: url('@/assets/img/image 25.png');
+  background-size: cover; /* Заполняет фон полностью, сохраняя пропорции */
+}
 
 </style>
