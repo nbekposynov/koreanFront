@@ -71,5 +71,8 @@ function handleClick(page) {
 </template>
 
 <style scoped>
-
+.flex {
+  background-size: cover;
+  margin-bottom: 20px;
+}
 </style>

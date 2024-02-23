@@ -1,6 +1,6 @@
 <template>
 <div>
-    <label v-show="showInput" for="" class="absolute z-50 top-[63%] right-4 lg:right-10 xl:right-23 max-w-[200px] lg:max-w-[250px] xl:max-w-[400px] w-full flex gap-3.5 rounded-[35px] bg-secondary lg:px-4 lg:py-3 px-2 py-1.5">
+    <label v-show="showInput" for="" class="absolute z-50 top-[63%] right-4 lg:right-32 xl:right-23 max-w-[200px] lg:max-w-[250px] xl:max-w-[400px] w-full flex gap-3.5 rounded-[35px] bg-secondary  px-2 py-1.5">
       <input type="text" ref="input" placeholder="Поиск" class="w-full text-primary" @focus="$router.push('/search')" v-model="search" @input="handleSearch">
     </label>
     <icon-search @click="setFocus"/>
