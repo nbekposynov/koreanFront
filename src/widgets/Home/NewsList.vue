@@ -86,7 +86,7 @@ watch(getNewsBy, () =>{
 </template>
 <style scoped>
 .news-list {
-  background-image: url('@/assets/img//news-bg.png');
+  background-image: url('@/assets/img//news-bg1.png');
   background-size: contain;
   background-size: 100%;
   background-position: 97% ;

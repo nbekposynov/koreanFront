@@ -112,7 +112,15 @@ const router = createRouter({
       component: () => import('../pages/Contacts.vue'),
       meta: { title: 'Контакты' }
     },
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // Всегда прокручивайте к верху, кроме случаев с сохранённой позицией
+    if (savedPosition) {
+      return { x: 0, y: 0 };
+    } else {
+      return { x: 0, y: 0 };
+    }
+  },
 })
 
 

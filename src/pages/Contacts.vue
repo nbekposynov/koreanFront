@@ -24,7 +24,7 @@ watch(selectedCityId, async (val) => {
 
 <template>
   <section class="lg:pt-24 md:pt-16 pt-8 flex flex-col lg:gap-20 md:gap-14 gap-8">
-    <h1 class="title container">Контакты и Региональные подразделения АКК</h1>
+    <h1 class="title container">Контакты и Региональные подразделения Ассоциации Корейцев Казахстана</h1>
     <filters-list v-if="cities.length" :filters="cities" :field="'name'" @filter="selectedCityId = $event.id" class="px-calc"/>
     <div v-for="item in contacts" :key="item.id" class="container flex flex-col items-center gap-9">
       <Map :coords="[item.latitude, item.longitude]" :address="item.address" :name="item.name" :phone="item.phone_number" class="w-full"/>
