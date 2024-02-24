@@ -113,22 +113,16 @@ const router = createRouter({
       meta: { title: 'Контакты' }
     },
   ],
-  scrollBehavior(to, from, savedPosition) {
-    // Всегда прокручивайте к верху, кроме случаев с сохранённой позицией
-    if (savedPosition) {
-      return { x: 0, y: 0 };
-    } else {
-      return { x: 0, y: 0 };
-    }
-  },
-})
 
+})
 
 
 // Глобальное изменение заголовка для всех страниц
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title || 'Заголовок по умолчанию';
   next();
+  window.scrollTo(0, 0);
+
 });
 
 
