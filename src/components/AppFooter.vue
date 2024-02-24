@@ -1,6 +1,7 @@
 <script setup>
 import IconTelegram from "@/components/icon/telegram.vue";
 import IconWhatsapp from "@/components/icon/whatsapp.vue";
+import IconInstagram from "@/components/icon/instagram.vue";
 import { useHttp } from "@/composables/useHttp.js";
 import { ref } from "vue";
 const { sendPhone } = useHttp();
@@ -16,7 +17,6 @@ async function handleSendPhone() {
   phone.value = "+7";
 
   showModal.value = true;
-
 }
 </script>
 
@@ -48,7 +48,9 @@ async function handleSendPhone() {
     >
       <div class="bg-white p-8 rounded-lg w-3/4 lg:w-1/2">
         <div class="flex justify-between items-start">
-          <p class="text-black text-center flex-1 text-2xl">Ваш запрос успешно отправлен!</p>
+          <p class="text-black text-center flex-1 text-2xl">
+            Ваш запрос успешно отправлен!
+          </p>
           <button
             @click="showModal = false"
             class="text-red-500 text-lg hover:text-red-700"
@@ -146,8 +148,13 @@ async function handleSendPhone() {
                 >
               </div>
               <div class="flex flex-col gap-3">
-                <icon-telegram class="text-xs" />
-                <icon-whatsapp class="text-xs" />
+                <a
+                  href="https://www.instagram.com/koreans_in_kazakhstan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon-instagram class="text-xs" />
+                </a>
               </div>
             </div>
           </div>

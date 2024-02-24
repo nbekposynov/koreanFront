@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@coreui/icons-vue": "^2.0.0",
     "axios": "^1.6.3",
     "normalize.css": "^8.0.1",
     "swiper": "^11.0.5",
