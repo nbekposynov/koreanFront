@@ -97,9 +97,9 @@ async function handleSendPhone() {
             </p>
             <div class="text-xs mt-4 opacity-[0.8]">
               <a
-                href="/associations"
+                href="/#associations"
                 class="decoration-0 font-medium text-[13px]"
-                >Ассоциация корецев Казахстана</a
+                >Ассоциация корейцев Казахстана</a
               ><br />
               <router-link
                 to="/news"
