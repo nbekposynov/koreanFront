@@ -34,7 +34,7 @@ onMounted(async () => {
           delay: 4000,
           disableOnInteraction: false,
         }"
-        class="max-h-[330px]"
+        class="max-h-[450px]"
     >
     <!-- Слайд с первым изображением -->
     <swiper-slide>

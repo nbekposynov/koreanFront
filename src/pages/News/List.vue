@@ -102,9 +102,12 @@ watch(getNewsBy, () =>{
   background-size: 50%;
   background-position: right 55%;
   background-repeat: no-repeat;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .news-list-grid {
     background-position: right 35%;
+    background-image: none; /* Скрывает фоновое изображение на устройствах с шириной экрана до 768px */
   }
 }
 </style>

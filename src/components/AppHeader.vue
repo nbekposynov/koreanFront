@@ -31,35 +31,23 @@ const showMenu = useBreakpoint(1200)
 
 
     <template v-if="showMenu">
-      <div class="burger-menu__btn" :class="{ active : openMenu }" @click="openMenu = !openMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <div class="burger-menu__btn" :class="{ active : openMenu }" @click="openMenu = !openMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-      <nav
-          class="w-[100vw] flex flex-col justify-center gap-10 bg-primary text-secondary xs:px-20 sm:px-10 px-5 text-3xl fixed top-0 right-0 transition-all duration-300 ease-in h-0 overflow-hidden shadow-primary shadow-lg"
-          :class="{ 'h-[100vh] lg:py-10 md:py-5 py-20' : openMenu }"
-      >
-        <a class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" href="/#associations">Ассоциация корейцев Казахстана</a>
-        <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/news">Новости</router-link>
-        <router-link class="whitespace-nowrap transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/ilbo">Коре ильбо</router-link>
-        <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/library">Библиотека</router-link>
-        <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/gallery">Галерея</router-link>
-      </nav>
-
-      <!--      <nav-->
-      <!--          v-else-->
-      <!--          class="flex flex-col justify-between gap-6 bg-secondary text-primary lg:px-10 md:px-5 px-2.5 rounded-xl text-xl absolute top-[100%] right-5 transition-all duration-300 ease-in h-0 overflow-hidden shadow-primary shadow-lg"-->
-      <!--          :class="{ 'h-[300px] lg:py-10 md:py-5 py-2.5' : openMenu }"-->
-      <!--      >-->
-      <!--        <router-link to="/associations" class="whitespace-pre">Ассоциация корейцев Казахстана</router-link>-->
-      <!--        <router-link to="/news">Новости</router-link>-->
-      <!--        <router-link to="/ilbo" class="whitespace-nowrap">Коре ильбо</router-link>-->
-      <!--        <router-link to="/library">Библиотека</router-link>-->
-      <!--        <router-link to="">Галерея</router-link>-->
-      <!--      </nav>-->
-    </template>
+  <nav
+      class="w-[100vw] flex flex-col justify-center gap-10 bg-primary text-secondary xs:px-20 sm:px-10 px-5 text-3xl fixed top-0 right-0 transition-all duration-300 ease-in h-0 overflow-hidden shadow-primary shadow-lg"
+      :class="{ 'h-[100vh] lg:py-10 md:py-5 py-20' : openMenu }"
+  >
+    <a class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" href="/#associations" @click="openMenu = false">Ассоциация корейцев Казахстана</a>
+    <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/news" @click.native="openMenu = false">Новости</router-link>
+    <router-link class="whitespace-nowrap transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/ilbo" @click.native="openMenu = false">Коре ильбо</router-link>
+    <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/library" @click.native="openMenu = false">Библиотека</router-link>
+    <router-link class="transition-all duration-800 ease-in" :class="{ 'opacity-1' : openMenu, 'opacity-0' : !openMenu }" to="/gallery" @click.native="openMenu = false">Галерея</router-link>
+  </nav>
+</template>
   </div>
 </header>
 </template>
