@@ -32,9 +32,9 @@ function formatTime(hours, minutes) {
 </script>
 
 <template>
-  <router-link :to="`/news/${item.id}`" class="news-card bg-[#D9D9D9DB] backdrop-blur">
-    <span class="absolute top-0 left-0 w-full h-full rounded-[20px]"></span>
-    <div class="news-card__img">
+  <router-link :to="`/news/${item.id}`" class="news-card bg-[#D9D9D9DB] backdrop-blur rounded-2xl" >
+    <span class="absolute top-0 left-0 w-full h-full rounded-2xl"></span>
+    <div class="news-card__img" style="border-radius: 0;">
       <img v-if="item.image" :src="item.image" alt="" class="min-w-full min-h-full">
       <img v-else src="@/assets/img/mock/new.png" alt="" class="min-w-full min-h-full">
     </div>
@@ -68,8 +68,8 @@ function formatTime(hours, minutes) {
 
 @media (min-width: 768px) {
   .news-card {
-    min-height: 450px; /* Фиксированная минимальная высота для больших экранов */
-    max-height: 450px;
+    min-height: 400px; /* Фиксированная минимальная высота для больших экранов */
+    max-height: 400px;
     min-width: 500px; /* Фиксированная минимальная высота для больших экранов */
     max-width: 500px;
     overflow: hidden; /* Фиксированная максимальная высота для больших экранов */

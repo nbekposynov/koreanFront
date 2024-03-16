@@ -127,7 +127,7 @@ async function handleSendPhone() {
             >
               <img
                 class="max-w-none w-[200%]"
-                src="@/assets/img/logo.png"
+                src="@/assets/img/logoHeader.png"
                 alt=""
               />
             </router-link>
@@ -149,11 +149,18 @@ async function handleSendPhone() {
               </div>
               <div class="flex flex-col gap-3">
                 <a
-                  href="https://www.instagram.com/koreans_in_kazakhstan"
+                  href="https://t.me/+77014781825"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon-instagram class="text-xs" />
+                  <Icon-telegram class="text-xs" />
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send/?phone=77014781825&text&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon-whatsapp class="text-xs" />
                 </a>
               </div>
             </div>

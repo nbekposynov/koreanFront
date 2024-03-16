@@ -1,13 +1,13 @@
 <script setup>
-import NewsCard from "@/components/News/Card.vue";
+import NewsCard from "@/components/News/CardNew.vue";
 const props = defineProps({
   news: Array
 })
 </script>
 
 <template>
-  <div class="container grid md:grid-cols-2 lg:gap-6 gap-3 lg:mt-9 lg:mt-6 mt-3">
-    <news-card v-for="item in news" :item="item"/>
+  <div class="container flex flex-col gap-6">
+    <NewsCard v-for="item in news" :key="item.id" :item="item" />
   </div>
 </template>
 
