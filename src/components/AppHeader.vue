@@ -19,10 +19,10 @@ const showMenu = useBreakpoint(1200);
     >
       <router-link
         to="/"
-        class="flex justify-center items-center md:min-w-[70px] min-w-[30px] md:w-[80px] md:h-[70px] w-[40px] h-[40px] overflow-hidden"
+        class="flex justify-center items-center md:min-w-[70px] min-w-[30px] md:w-[80px] md:h-[70px] w-[40px] h-[40px]"
       >
         <img
-          class="max-w-none w-[181%]"
+          class="max-w-none w-[215%]"
           src="@/assets/img/logoHeader.png"
           alt=""
         />

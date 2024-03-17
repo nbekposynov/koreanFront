@@ -155,13 +155,6 @@ async function handleSendPhone() {
                 >
                   <Icon-telegram class="text-xs" />
                 </a>
-                <a
-                  href="https://api.whatsapp.com/send/?phone=77014781825&text&type=phone_number&app_absent=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon-whatsapp class="text-xs" />
-                </a>
               </div>
             </div>
           </div>

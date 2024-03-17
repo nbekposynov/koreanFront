@@ -74,7 +74,7 @@ watch(getNewsBy, () =>{
   <div class="news-list">
     <div class="container">
       <h3 class="lg:text-4xl text-2xl font-bold flex gap-5">
-        <label class="text-primary">Новости <span class="font-[Cairo]">🔥</span></label>
+        <label class="text-primary">Новости</label>
       </h3>
       <p class="text-light text-base mt-[7px]">Актуальные</p>
 <!--      <filters-list :filters="filters" @filter="getNewsBy.filter = $event.value" class="mt-8 pl-auto px-calc"/>-->
@@ -86,7 +86,6 @@ watch(getNewsBy, () =>{
 </template>
 <style scoped>
 .news-list {
-  background-image: url('@/assets/img//news-bg1.png');
   background-size: contain;
   background-size: 100%;
   background-position: 97% ;
