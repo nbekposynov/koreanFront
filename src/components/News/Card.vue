@@ -32,15 +32,15 @@ function formatTime(hours, minutes) {
 </script>
 
 <template>
-  <router-link :to="`/news/${item.id}`" class="news-card bg-[#D9D9D9DB] backdrop-blur rounded-2xl" >
-    <span class="absolute top-0 left-0 w-full h-full rounded-2xl"></span>
+  <router-link :to="`/news/${item.id}`" class="news-card bg-[#D9D9D9DB] backdrop-blur rounded-sm" >
+    <span class="absolute top-0 left-0 w-full h-full rounded-sm"></span>
     <div class="news-card__img" style="border-radius: 0;">
       <img v-if="item.image" :src="item.image" alt="" class="min-w-full min-h-full">
       <img v-else src="@/assets/img/mock/new.png" alt="" class="min-w-full min-h-full">
     </div>
     <div class="p-3">
       <p class="news-card__title text-[#232323]">{{ item.title }}</p>
-      <p class="news-card__date text-[#232323] mt-4 font-bold">{{ formatDate(item.created_at) }}</p>
+      <p class="news-card__date text-[#232323] mt-4">{{ formatDate(item.created_at) }}</p>
     </div>
   </router-link>
 </template>

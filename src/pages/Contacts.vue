@@ -29,6 +29,7 @@ watch(selectedCityId, async (val) => {
     <h1 class="title container">
       Контакты и Региональные подразделения Ассоциации Корейцев Казахстана
     </h1>
+    
     <filters-list
       v-if="cities.length"
       :filters="cities"
@@ -36,7 +37,7 @@ watch(selectedCityId, async (val) => {
       @filter="selectedCityId = $event.id"
       class="px-calc container flex flex1 "
     />
-    <Map :contacts="contacts" class="w-full container" />
+
     <div
       v-for="item in contacts"
       :key="item.id"
@@ -51,9 +52,7 @@ watch(selectedCityId, async (val) => {
           <p>{{ item.address }}</p>
         </div>
         <div
-          v-for="phone in item.phone_number.match(
-            /\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}/g
-          )"
+          v-for="phone in item.phone_number.match(/\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}/g)"
           :key="phone"
           class="flex gap-3.5 items-center"
         >
@@ -70,6 +69,8 @@ watch(selectedCityId, async (val) => {
         </a>
       </div>
     </div>
+
+    <Map :contacts="contacts" class="w-full container" />
   </section>
 </template>
 
