@@ -184,7 +184,7 @@ import IconClose from "@/components/icon/close.vue";
             <img alt="Ким Елена Викторовна" class="flex-none w-100 h-100 object-cover" src="@/assets/img/mock/kim_ev.png">
             <div class="flex-grow">
               <p class="md:text-2xl text-xl">
-                <strong>Ким Денис Вилорьевич<br>Член президиума АКК.</strong>
+                <strong>Ким Елена Викторовна<br>Член президиума АКК.</strong>
                 <br/>
                 Год рождения: 26.05.1978 <br> <br>
                 Директор Республиканского государственного академического корейского театра музыкальной комедии<br>
