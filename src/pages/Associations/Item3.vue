@@ -22,7 +22,7 @@ import IconClose from "@/components/icon/close.vue";
               />
               <div class="flex-grow">
                 <p class="md:text-2xl text-xl">
-                  <strong>Ф.И.О&nbsp;</strong> Цхай Юрий Андреевич<br />
+                  <strong>Цхай Юрий Андреевич&nbsp;</strong><br />
                   <strong>Дата рождения:</strong> 14.10.1948<br />
                   <strong> Должность:</strong> Председатель Попечительского
                   Совета ОЮЛ «Ассоциация корейцев Казахстана». Председатель
@@ -43,7 +43,7 @@ import IconClose from "@/components/icon/close.vue";
               />
               <div class="flex-grow">
                 <p class="md:text-2xl text-xl">
-                  <strong>Ф.И.О&nbsp;</strong> Кан Георгий Васильевич<br />
+                  <strong>Кан Георгий Васильевич&nbsp;</strong><br />
                   <strong>Дата рождения:</strong> 28.06.1965<br />
                   <strong> Должность:</strong> Доктор исторических наук,
                   профессор. Член государственной комиссии по полной
@@ -65,7 +65,7 @@ import IconClose from "@/components/icon/close.vue";
               />
               <div class="flex-grow">
                 <p class="md:text-2xl text-xl">
-                  <strong>Ф.И.О&nbsp;</strong> Кан Сергей Владимирович<br />
+                  <strong>Кан Сергей Владимирович&nbsp;</strong><br />
                   <strong>Дата рождения:</strong> 10.02.1968<br />
                   <strong> Должность:</strong> Председатель совета директоров АО
                   «Казахский институт нефти и газа». Член совета директоров АО
@@ -87,7 +87,7 @@ import IconClose from "@/components/icon/close.vue";
               />
               <div class="flex-grow">
                 <p class="md:text-2xl text-xl">
-                  <strong>Ф.И.О&nbsp;</strong> Ким Герман Николаевич<br />
+                  <strong>Ким Герман Николаевич&nbsp;</strong><br />
                   <strong>Дата рождения:</strong> 16.07.1953<br />
                   <strong> Должность:</strong> Доктор исторических наук,
                   профессор. Директор института Азиатских исследований КазНУ им.
@@ -108,7 +108,7 @@ import IconClose from "@/components/icon/close.vue";
               />
               <div class="flex-grow">
                 <p class="md:text-2xl text-xl">
-                  <strong>Ф.И.О&nbsp;</strong> Ким Роман Ухенович<br />
+                  <strong>Ким Роман Ухенович&nbsp;</strong><br />
                   <strong>Дата рождения:</strong> 08.05.1955<br />
                   <strong> Должность:</strong> Депутат V и VI созыва Мажилиса
                   Парламента РК Член Консультативного комитета по мирному и
@@ -130,7 +130,7 @@ import IconClose from "@/components/icon/close.vue";
               />
               <div class="flex-grow">
                 <p class="md:text-2xl text-xl">
-                  <strong>Ф.И.О&nbsp;</strong> Ни Любовь Августовна<br />
+                  <strong>Ни Любовь Августовна&nbsp;</strong><br />
                   <strong>Дата рождения:</strong> 26.01.1952<br />
                   <strong> Должность:</strong> Директор Государственного
                   республиканского академического корейского театра музыкальной
@@ -151,7 +151,7 @@ import IconClose from "@/components/icon/close.vue";
               />
               <div class="flex-grow">
                 <p class="md:text-2xl text-xl">
-                  <strong>Ф.И.О&nbsp;</strong> Пя Юрий Владимирович<br />
+                  <strong>Пя Юрий Владимирович&nbsp;</strong><br />
                   <strong>Дата рождения:</strong> 22.08.1957<br />
                   <strong> Должность:</strong>Доктор медицинских наук.
                   Председатель правления корпоративного фонда «University
@@ -172,7 +172,7 @@ import IconClose from "@/components/icon/close.vue";
               />
               <div class="flex-grow">
                 <p class="md:text-2xl text-xl">
-                  <strong>Ф.И.О&nbsp;</strong> Шин Бронислав Сергеевич<br />
+                  <strong>Шин Бронислав Сергеевич&nbsp;</strong><br />
                   <strong>Дата рождения:</strong> 02.08.1946<br />
                   <strong> Должность:</strong>Председатель совета директоров АО
                   «Алматыинжстрой» и «Алматыкурылыс». Председатель ОО

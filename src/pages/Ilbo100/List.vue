@@ -27,12 +27,12 @@ async function getData(page = 1) {
   <h1 class="text-5xl font-extralight">100 лет Коре Ильбо</h1>
 
   <div class="mt-[45px]">
-    <div class="flex gap-6 justify-between lg:flex-row flex-col">
+    <div class="flex gap-6 justify-start  lg:flex-row flex-col">
       <div class="w-[220px] h-[300px] overflow-hidden flex justify-center items-center">
         <img :src="koreIlbofirst?.image" :alt="koreIlbofirst?.name">
       </div>
       <router-link :to="`/ilbo/${koreIlbofirst?.id}`">
-        <h3 class="text-3xl mb-2.5">{{ koreIlbofirst?.name }}</h3>
+        <h3 class="text-3xl mb-2.5 mr-">{{ koreIlbofirst?.name }}</h3>
         <div class="text-xl" v-html="koreIlbofirst?.desc" ></div>
       </router-link>
     </div>
