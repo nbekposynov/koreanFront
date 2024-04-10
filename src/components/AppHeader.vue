@@ -5,6 +5,7 @@ import useBreakpoint from "@/composables/useBreakpoint";
 import SearchMobile from "@/components/SearchMobile.vue";
 import IconWhatsapp from "@/components/icon/whatsapp.vue";
 import IconWhatsapph from "@/components/icon/whatsapph.vue";
+import GoogleTranslateWidget from '@/components/GoogleTranslateWidget.vue';
 
 import IconInstagram from "@/components/icon/instagram.vue";
 
@@ -56,7 +57,11 @@ const showMenu = useBreakpoint(1200);
           <Icon-whatsapph style="width: 25px; height: 25px" />
           <!-- Измените размеры здесь -->
         </a>
+        <div id="app">
+    <!-- Остальное содержимое вашего приложения -->
+  </div>
       </nav>
+      <google-translate-widget></google-translate-widget>
 
       <search v-if="!showMenu" />
 
@@ -113,6 +118,7 @@ const showMenu = useBreakpoint(1200);
             >Галерея</router-link
           >
         </nav>
+
       </template>
     </div>
   </header>

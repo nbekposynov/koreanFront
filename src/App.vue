@@ -1,12 +1,12 @@
 <script setup>
 import AppHeader from "@/components/AppHeader.vue";
+import GoogleTranslateWidget from './components/GoogleTranslateWidget.vue';
 import AppFooter from "@/components/AppFooter.vue";
 </script>
 
 <template>
   <div class="flex flex-col">
     <app-header v-if="!$route.path.includes('/gallery/')"/>
-
     <main :class="{ 'main' : !$route.path.includes('/gallery/')}" class="flex-auto">
       <router-view/>
     </main>
