@@ -10,7 +10,6 @@
     <!-- Выпадающий список языков -->
     <div v-if="showDropdown" class="dropdown">
       <div @click="setLanguage('en')">Английский</div>
-      <div @click="setLanguage('ru')">Русский</div>
       <div @click="setLanguage('ko')">Корейский</div>
     </div>
   </div>
