@@ -3,12 +3,12 @@ import axios from "axios";
 export const useHttp = () => {
   axios.defaults.headers.common["ngrok-skip-browser-warning"] = "69420";
 
-  const http = axios.create({
-      baseURL: 'http://localhost:8000'
-  });
   // const http = axios.create({
-  //   baseURL: "https://api.koreans.kz",
+  //     baseURL: 'http://localhost:8000'
   // });
+  const http = axios.create({
+    baseURL: "https://api.koreans.kz",
+  });
 
   async function getAlbum() {
     const res = await http.get("api/getAlbumPhoto");
