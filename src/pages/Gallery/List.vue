@@ -10,26 +10,17 @@ const router = useRouter();
 
 const albums = ref([]);
 const years = ref([]);
-// const years = ref([
-//   {title: "2023", value: "2023"},
-//   {title: "2022", value: "2022"},
-//   {title: "2021", value: "2021"},
-//   {title: "2020", value: "2020"},
-//   {title: "2019", value: "2019"},
-//   {title: "2018", value: "2018"},
-//   {title: "2017", value: "2017"}
-// ]);
 const selectedYear = ref('2023');
 const filteredAlbums = ref([]);
 onMounted(async () => {
-  albums.value = await getAlbum();
-  filteredAlbums.value = albums.value;
-  years.value = [...new Set(albums.value.map(item => {
-    return {
-      title: item.publication_year,
-      value: item.publication_year
-    }
-  }))];
+  try {
+    albums.value = await getAlbum();
+    const yearSet = new Set(albums.value.map(item => item.publication_year));
+    years.value = Array.from(yearSet).map(year => ({ title: year, value: year }));
+    filteredAlbums.value = albums.value.filter(item => item.publication_year === selectedYear.value);
+  } catch (error) {
+    console.error('Failed to load albums:', error);
+  }
 });
 
 watch(selectedYear, (value) => {
